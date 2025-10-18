@@ -6,6 +6,11 @@ public class Inventory : MonoBehaviour
     [SerializeField] Image[] objects;
     [SerializeField] MousePointer mouse;
     Item[] items = new Item[8];
+
+    private void Start()
+    {
+        EventHandler.Instance.ItemRemovedEvent += RemoveItem;
+    }
     public void SelectItem(int Index)
     {
         mouse.SelectInteractionItem(items[Index]);
