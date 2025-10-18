@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,6 +11,8 @@ public class MousePointer : MonoBehaviour
     [SerializeField] InputActionReference PointerAction;
     [SerializeField] InputActionReference ClickAction;
     [SerializeField] LayerMask InteractableLayers;
+
+    public Action OnSelectionChanged;
 
     [SerializeField] TextMeshProUGUI ContextUseHintLabel;
 
@@ -120,6 +123,7 @@ public class MousePointer : MonoBehaviour
     {
         SelectedInteraction = interactionType;
         SelectedItem = null;
+        OnSelectionChanged?.Invoke();
     }
     public void SelectInteractionExamine() => SelectInteractionType(InteractionType.Examine);
     public void SelectInteractionInteract() => SelectInteractionType(InteractionType.Interact);
@@ -128,6 +132,7 @@ public class MousePointer : MonoBehaviour
     {
         SelectedInteraction = InteractionType.None;
         SelectedItem = item;
+        OnSelectionChanged?.Invoke();
     }
 
     void OnEnable()
