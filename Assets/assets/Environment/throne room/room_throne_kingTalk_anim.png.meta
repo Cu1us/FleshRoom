@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: -8739044651400593534
     second: room_throne_kingTalk_anim_2
+  - first:
+      213: 5008502428910096568
+    second: room_throne_kingTalk_anim_3
+  - first:
+      213: 1728261343778929722
+    second: room_throne_kingTalk_anim_4
+  - first:
+      213: -6574428003562553127
+    second: room_throne_kingTalk_anim_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,9 +119,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 42
+        y: 43
         width: 548
-        height: 268
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +140,10 @@ TextureImporter:
       name: room_throne_kingTalk_anim_1
       rect:
         serializedVersion: 2
-        x: 566
+        x: 547
         y: 42
-        width: 548
-        height: 268
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +162,10 @@ TextureImporter:
       name: room_throne_kingTalk_anim_2
       rect:
         serializedVersion: 2
-        x: 1126
-        y: 42
+        x: 566
+        y: 43
         width: 548
-        height: 268
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,6 +176,72 @@ TextureImporter:
       bones: []
       spriteID: 28f7df4e03da8b680800000000000000
       internalID: -8739044651400593534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_kingTalk_anim_3
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b01ed34c66c18540800000000000000
+      internalID: 5008502428910096568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_kingTalk_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 43
+        width: 548
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c7bf219840cf710800000000000000
+      internalID: 1728261343778929722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_kingTalk_anim_5
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d006464090f2c4a0800000000000000
+      internalID: -6574428003562553127
       vertices: []
       indices: 
       edges: []
@@ -188,6 +263,9 @@ TextureImporter:
       room_throne_kingTalk_anim_0: -2594511166150031905
       room_throne_kingTalk_anim_1: 4274400084537072757
       room_throne_kingTalk_anim_2: -8739044651400593534
+      room_throne_kingTalk_anim_3: 5008502428910096568
+      room_throne_kingTalk_anim_4: 1728261343778929722
+      room_throne_kingTalk_anim_5: -6574428003562553127
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

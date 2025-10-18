@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: 3853359041573950473
     second: room_throne_queenLaugh_anim_2
+  - first:
+      213: 6985191168903472916
+    second: room_throne_queenLaugh_anim_3
+  - first:
+      213: 6249916769761112680
+    second: room_throne_queenLaugh_anim_4
+  - first:
+      213: 5116025775333997177
+    second: room_throne_queenLaugh_anim_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -110,9 +119,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 42
+        y: 43
         width: 548
-        height: 268
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +140,10 @@ TextureImporter:
       name: room_throne_queenLaugh_anim_1
       rect:
         serializedVersion: 2
-        x: 566
+        x: 547
         y: 42
-        width: 548
-        height: 268
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +162,10 @@ TextureImporter:
       name: room_throne_queenLaugh_anim_2
       rect:
         serializedVersion: 2
-        x: 1126
-        y: 42
+        x: 566
+        y: 43
         width: 548
-        height: 268
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,6 +176,72 @@ TextureImporter:
       bones: []
       spriteID: 9041e01e1a1e97530800000000000000
       internalID: 3853359041573950473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_queenLaugh_anim_3
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 417efa6eb5260f060800000000000000
+      internalID: 6985191168903472916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_queenLaugh_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 43
+        width: 548
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8623e59403a2cb650800000000000000
+      internalID: 6249916769761112680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: room_throne_queenLaugh_anim_5
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 42
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a76883656cff640800000000000000
+      internalID: 5116025775333997177
       vertices: []
       indices: 
       edges: []
@@ -188,6 +263,9 @@ TextureImporter:
       room_throne_queenLaugh_anim_0: 6250674058399659730
       room_throne_queenLaugh_anim_1: -5120981905392075761
       room_throne_queenLaugh_anim_2: 3853359041573950473
+      room_throne_queenLaugh_anim_3: 6985191168903472916
+      room_throne_queenLaugh_anim_4: 6249916769761112680
+      room_throne_queenLaugh_anim_5: 5116025775333997177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
