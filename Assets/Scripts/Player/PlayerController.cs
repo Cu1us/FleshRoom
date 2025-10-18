@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         if (inputReference.action.IsPressed())  
         {
-            EventHandler.Instance.PlayerChangeEvent?.Invoke(new Vector3(0, 0, 0), 0, false);
+            EventHandler.Instance.PlayerChangeEvent?.Invoke(0, 0, false);
         }
         currentAction();
     }
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         //change player rotation & play animation before returning to sleep
         currentAction = actionQueue.Pop();
     }
-    private void OnPositionChangedEvent(Vector3 position, int animationID, bool right)
+    private void OnPositionChangedEvent(float position, int animationID, bool right)
     {
         actionQueue.Clear();
         actionQueue.Push(Sleep);
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             this.animationID = animationID;
             actionQueue.Push(PlayAnimation);
         }
-        targetPosition = position;
+        targetPosition = new Vector3(position, transform.position.y, 0);
         actionQueue.Push(Move);
         currentAction = actionQueue.Pop();
     }
