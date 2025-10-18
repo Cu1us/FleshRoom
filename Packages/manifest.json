@@ -2,7 +2,7 @@
   "dependencies": {
     "com.cu1us.cu1usfx": "https://github.com/Cu1us/Cu1uSFX.git",
     "com.unity.2d.animation": "12.0.2",
-    "com.unity.2d.aseprite": "2.0.1",
+    "com.unity.2d.aseprite": "2.0.2",
     "com.unity.2d.psdimporter": "11.0.1",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.spriteshape": "12.0.1",

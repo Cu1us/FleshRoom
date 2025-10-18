@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public delegate void PositionChangedEvent(Vector3 position, int animationID, bool right);
+public delegate void PositionChangedEvent(float position, int animationID, bool right);
 
 public class EventHandler : MonoBehaviour
 {
