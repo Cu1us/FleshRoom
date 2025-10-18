@@ -7,10 +7,8 @@ public class SceneHandler : MonoBehaviour
     private int previousRoom, currentRoom;
     void Start()
     {
-        DontDestroyOnLoad(this);
-        SceneManager.LoadScene(1, LoadSceneMode.Additive); //main menu scene
-        SceneManager.LoadScene(1, LoadSceneMode.Additive); //UI menu scene
-        previousRoom = 0;
+        previousRoom = 2;
+        EventHandler.Instance.ChangeRoomEvent += ChangeRoom;
     }
 
     public void ChangeRoom(int ID)
