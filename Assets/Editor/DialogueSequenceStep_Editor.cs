@@ -47,11 +47,15 @@ public class DialogueSequenceStep_Editor : PropertyDrawer
         {
             if (speakerProp?.objectReferenceValue == null)
             {
-                window.text = durationProp.floatValue > 0 ? "[ Wait block ]" : "[ No speaker ]";
+                window.text = durationProp.floatValue > 0 ? "[Wait block]" : "[No speaker]";
             }
             else
             {
                 window.text = speakerProp.objectReferenceValue.name;
+                if ((speakerProp.objectReferenceValue as Dialogue) != null)
+                {
+                    window.style.color = (speakerProp.objectReferenceValue as Dialogue).SpeakerColor;
+                }
             }
         }
     }

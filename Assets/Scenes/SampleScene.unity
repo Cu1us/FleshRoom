@@ -349,10 +349,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 834666654}
-  - component: {fileID: 834666653}
-  - component: {fileID: 834666655}
-  - component: {fileID: 834666657}
   - component: {fileID: 834666656}
+  - component: {fileID: 834666655}
   m_Layer: 0
   m_Name: TestInteractionHandler
   m_TagString: Untagged
@@ -360,18 +358,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &834666653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834666652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccced941717ca01f2bedc9e10a976bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestInteractionHandler
 --- !u!4 &834666654
 Transform:
   m_ObjectHideFlags: 0
@@ -396,30 +382,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 834666652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2316806df9542c57dab0f3d5b6cde567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ManualInteractCondition
-  AllowInteraction: 1
---- !u!114 &834666656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834666652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 834666657}
-    Line: Why the long face?
-    Duration: 0
-  - Speaker: {fileID: 834666657}
-    Line: Why the long face?
-    Duration: 0
---- !u!114 &834666657
+  - Speaker: {fileID: 834666656}
+    Line: Hello
+    Duration: 3
+  - Speaker: {fileID: 834666656}
+    Line: Hello
+    Duration: 3
+--- !u!114 &834666656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -431,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4555cc3a1b55ae20a902b332007b8dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
-  SpeakerColor: {r: 1, g: 0, b: 0, a: 1}
+  SpeakerColor: {r: 0.3453049, g: 0.79490316, b: 0.45937505, a: 1}
 --- !u!1 &2046801519
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,14 +434,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: 
+  Name: Paint bucket
   Interactions:
-  - Type: 0
+  - Type: 1
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 834666657}
+        - m_Target: {fileID: 834666656}
           m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
           m_MethodName: SpeakLine
           m_Mode: 5
@@ -477,7 +450,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: What's that?
+            m_StringArgument: Hello
             m_BoolArgument: 0
           m_CallState: 2
   ItemInteractions: []
