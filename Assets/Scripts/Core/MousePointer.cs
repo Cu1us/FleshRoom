@@ -47,7 +47,9 @@ public class MousePointer : MonoBehaviour
         {
             if (hitBackground)
             {
-                EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
+                Debug.Log(SelectedInteraction + ", " + SelectedItem);
+                if (SelectedInteraction == InteractionType.None && SelectedItem == null)
+                    EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
                 ClearInteraction();
                 return;
             }
@@ -77,17 +79,12 @@ public class MousePointer : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(origin, new(0, 0), 100, InteractableLayers);
         if (hit.collider != null)
         {
-            if (hit.collider.CompareTag("Background"))
-            {
-                hitBackground = true;
-                interactable = null;
-                return true;
-            }
+            hitBackground = hit.collider.CompareTag("Background");
             if (hit.collider.gameObject.TryGetComponent(out interactable))
             {
-                hitBackground = false;
                 return true;
             }
+            return hitBackground;
         }
         hitBackground = false;
         interactable = null;
@@ -98,8 +95,21 @@ public class MousePointer : MonoBehaviour
     {
         if (interactable == null)
         {
-            ContextUseHintLabel.text = string.Empty;
-            ContextUseHintLabel.enabled = false;
+            if (SelectedInteraction != InteractionType.None)
+            {
+                ContextUseHintLabel.text = SelectedInteraction switch
+                {
+                    InteractionType.Interact => "Interact with...",
+                    InteractionType.Examine => "Examine...",
+                    _ => ""
+                };
+                ContextUseHintLabel.enabled = true;
+            }
+            else
+            {
+                ContextUseHintLabel.text = string.Empty;
+                ContextUseHintLabel.enabled = false;
+            }
             return;
         }
         if (SelectedItem != null)
