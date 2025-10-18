@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestInteractionHandler : MonoBehaviour, IInteractionHandler
+public class TestInteractionHandler : MonoBehaviour
 {
     public void Interact()
     {

@@ -3,66 +3,70 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[CustomPropertyDrawer(typeof(Interaction))]
+[CustomPropertyDrawer(typeof(Interaction)), CustomPropertyDrawer(typeof(ItemInteraction))]
 public class Interaction_Editor : PropertyDrawer
 {
     public override VisualElement CreatePropertyGUI(SerializedProperty property)
     {
+        bool isDefaultInteraction = property.name.StartsWith("Default");
+
         VisualElement content = new();
         Box header = new()
         {
             style = { flexDirection = FlexDirection.Row }
         };
-        PropertyField typeField = new(property.FindPropertyRelative(nameof(Interaction.Type)), "")
+        if (isDefaultInteraction)
         {
-            style = { width = Length.Percent(70) }
+            Label defaultLabel = new(property.displayName)
+            {
+                style = { width = Length.Percent(82), alignSelf = Align.Center, marginLeft = Length.Percent(3) }
+            };
+            header.Add(defaultLabel);
+        }
+        else
+        {
+            PropertyField typeField = new(property.FindPropertyRelative(nameof(Interaction.Type)), "")
+            {
+                style = { width = Length.Percent(85) }
+            };
+            typeField.Bind(property.serializedObject);
+            header.Add(typeField);
+        }
+
+        VisualElement foldout = new()
+        {
+            style = { display = DisplayStyle.None }
         };
-        typeField.Bind(property.serializedObject);
-        header.Add(typeField);
-        Button makeEventButton = new(() => MakeEvent(property))
+        bool foldoutShown = false;
+
+        Button hideShowButton = new()
         {
             style = { width = Length.Percent(15) },
-            text = "Event"
+            text = "Edit"
         };
-        header.Add(makeEventButton);
-        Button makeRefButton = new(() => MakeRef(property))
+        header.Add(hideShowButton);
+
+        hideShowButton.clicked += () =>
         {
-            style = { width = Length.Percent(15) },
-            text = "Ref"
+            if (foldoutShown)
+                foldout.style.display = DisplayStyle.None;
+            else
+                foldout.style.display = DisplayStyle.Flex;
+            foldoutShown = !foldoutShown;
+            hideShowButton.text = foldoutShown ? "Close" : "Edit";
         };
-        header.Add(makeRefButton);
+
+        PropertyField conditionField = new(property.FindPropertyRelative(nameof(Interaction.Condition)));
+        conditionField.Bind(property.serializedObject);
+        foldout.Add(conditionField);
+
+        PropertyField eventField = new(property.FindPropertyRelative(nameof(Interaction.Handler)));
+        eventField.Bind(property.serializedObject);
+        foldout.Add(eventField);
+
         content.Add(header);
-
-        // PropertyField handlerField1 = new(property.FindPropertyRelative(nameof(Interaction.Handler)))
-        // {
-        //     dataSourceType = typeof(IInteractionHandler)
-        // };
-        // handlerField1.Bind(property.serializedObject);
-        // content.Add(handlerField1);
-
-        ObjectField handlerField = new("Handler")
-        {
-            objectType = typeof(IInteractionHandler)
-        };
-        handlerField.bindingPath = property.FindPropertyRelative(nameof(Interaction.Handler)).propertyPath;
-        handlerField.Bind(property.serializedObject);
-        content.Add(handlerField);
+        content.Add(foldout);
 
         return content;
-    }
-
-    void MakeEvent(SerializedProperty property)
-    {
-        Debug.Log("Made event");
-        SerializedProperty handler = property.FindPropertyRelative(nameof(Interaction.Handler));
-        handler.boxedValue = new InteractionEvent();
-        property.serializedObject.ApplyModifiedProperties();
-    }
-    void MakeRef(SerializedProperty property)
-    {
-        Debug.Log("Made ref");
-        SerializedProperty handler = property.FindPropertyRelative(nameof(Interaction.Handler));
-        handler.boxedValue = null;
-        property.serializedObject.ApplyModifiedProperties();
     }
 }
