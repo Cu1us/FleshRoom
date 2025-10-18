@@ -11,16 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float movementSpeed;
     [SerializeField] float positionTolerance;
     Vector3 targetPosition;
-    Action currentAction;
+    Action currentAction, interactAction;
     private Stack<Action> actionQueue = new Stack<Action>();
     int animationID; bool facingRight;
 
     void Update()
     {
-        if (inputReference.action.IsPressed())  
-        {
-            EventHandler.Instance.PlayerChangeEvent?.Invoke(0, 0, false);
-        }
         currentAction();
     }
     
@@ -35,12 +31,13 @@ public class PlayerController : MonoBehaviour
         if ((transform.position - targetPosition).magnitude < positionTolerance) currentAction = actionQueue.Pop();
     }
 
-    private void PlayAnimation()
+    private void PerformAction()
     {
         //change player rotation & play animation before returning to sleep
         currentAction = actionQueue.Pop();
+        interactAction?.Invoke();
     }
-    private void OnPositionChangedEvent(float position, int animationID, bool right)
+    private void OnPositionChangedEvent(float position, int animationID, bool right, Action iAction)
     {
         actionQueue.Clear();
         actionQueue.Push(Sleep);
@@ -48,7 +45,8 @@ public class PlayerController : MonoBehaviour
         {
             facingRight = right;
             this.animationID = animationID;
-            actionQueue.Push(PlayAnimation);
+            interactAction = iAction;
+            actionQueue.Push(PerformAction);
         }
         targetPosition = new Vector3(position, transform.position.y, 0);
         actionQueue.Push(Move);
