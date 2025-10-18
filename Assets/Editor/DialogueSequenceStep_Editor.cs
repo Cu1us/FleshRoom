@@ -37,6 +37,11 @@ public class DialogueSequenceStep_Editor : PropertyDrawer
         durationField.Bind(property.serializedObject);
         window.Add(durationField);
 
+        SerializedProperty audioProp = property.FindPropertyRelative(nameof(DialogueSequenceStep.Audio));
+        PropertyField audioField = new(audioProp);
+        audioField.Bind(property.serializedObject);
+        window.Add(audioField);
+
         OnFieldChanged();
         speakerField.RegisterValueChangeCallback((callback) => OnFieldChanged());
         durationField.RegisterValueChangeCallback((callback) => OnFieldChanged());
