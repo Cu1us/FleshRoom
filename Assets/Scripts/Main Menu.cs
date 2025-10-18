@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class MainMenu : MonoBehaviour
     {
         FindAnyObjectByType<MousePointer>().enabled = true;
         FindAnyObjectByType<PlayerController>().enabled = true;
+        SceneManager.UnloadSceneAsync(0); //main menu scene
     }
 
     public void Quit()
