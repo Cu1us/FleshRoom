@@ -20,13 +20,13 @@ public class Dialogue : MonoBehaviour
     }
     public void ShowSequenceStep(DialogueSequenceStep step)
     {
-        CancelInvoke(nameof(StopShowingText));
+        CancelInvoke(nameof(StopDialogue));
         TextField.enabled = true;
         TextField.text = step.Line;
         TextField.color = SpeakerColor;
-        Invoke(nameof(StopShowingText), step.Duration);
+        Invoke(nameof(StopDialogue), step.Duration);
     }
-    public void StopShowingText()
+    public void StopDialogue()
     {
         TextField.enabled = false;
         TextField.text = string.Empty;

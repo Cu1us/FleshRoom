@@ -9,14 +9,14 @@ public class DialogueSequence : MonoBehaviour
     Queue<DialogueSequenceStep> stepSequence = new();
 
 
-    public void SpeakSequence(DialogueSequence sequence)
+    public void PlaySequence()
     {
         StopDialogue();
         stepSequence.Clear();
-        foreach (DialogueSequenceStep step in sequence.Sequence)
+        foreach (DialogueSequenceStep step in Sequence)
         {
             stepSequence.Enqueue(step);
-            step.Speaker.StopShowingText();
+            step.Speaker.StopDialogue();
         }
         ShowNext();
     }
