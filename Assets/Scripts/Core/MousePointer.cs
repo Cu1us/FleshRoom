@@ -46,8 +46,6 @@ public class MousePointer : MonoBehaviour
             {
                 EventHandler.Instance.PlayerChangeEvent?.Invoke(
                     interactable.transform.position.x,
-                    0,
-                    false,
                     () => interactable.InteractItem(SelectedItem)
                 );
             }
@@ -55,15 +53,17 @@ public class MousePointer : MonoBehaviour
             {
                 EventHandler.Instance.PlayerChangeEvent?.Invoke(
                     interactable.transform.position.x,
-                    0,
-                    false,
                     () => interactable.Interact(SelectedInteraction)
                 );
+            }
+            else
+            {
+                EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
             }
         }
         else
         {
-            EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, 0, false, null);
+            EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
         }
     }
 
