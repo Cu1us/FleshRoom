@@ -7,6 +7,7 @@ public class MousePointer : MonoBehaviour
 {
     [SerializeField] RectTransform rect;
     [SerializeField] InputActionReference PointerAction;
+    [SerializeField] InputActionReference ClickAction;
     [SerializeField] LayerMask InteractableLayers;
 
     [SerializeField] TextMeshProUGUI ContextUseHintLabel;
@@ -20,6 +21,11 @@ public class MousePointer : MonoBehaviour
     {
         rect = GetComponent<RectTransform>();
     }
+    void Start()
+    {
+        ClickAction.action.performed += OnClick;
+        
+    }
     void Update()
     {
         if (camera == null)
@@ -28,8 +34,12 @@ public class MousePointer : MonoBehaviour
         rect.position = pointerPos;
         if (TryRaycastForInteractable(out Interactable interactable))
         {
-            
+
         }
+    }
+    void OnClick(InputAction.CallbackContext callbackContext)
+    {
+        
     }
 
     bool TryRaycastForInteractable(out Interactable interactable)
@@ -77,6 +87,8 @@ public class MousePointer : MonoBehaviour
         SelectedInteraction = interactionType;
         SelectedItem = null;
     }
+    public void SelectInteractionExamine() => SelectInteractionType(InteractionType.Examine);
+    public void SelectInteractionInteract() => SelectInteractionType(InteractionType.Interact);
     public void SelectInteractionItem(Item item)
     {
         SelectedInteraction = InteractionType.None;
