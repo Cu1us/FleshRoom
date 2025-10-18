@@ -26,8 +26,9 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed * Time.deltaTime);
-        if ((transform.position - targetPosition).magnitude < positionTolerance) currentAction = actionQueue.Pop();
+        Debug.Log("tries to move");
+        transform.parent.position = Vector3.Lerp(transform.parent.position, targetPosition, movementSpeed * Time.deltaTime / (transform.parent.position - targetPosition).magnitude);
+        if ((transform.parent.position - targetPosition).magnitude < positionTolerance) currentAction = actionQueue.Pop();
     }
 
     private void PerformAction()
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnPositionChangedEvent(float position, int animationID, bool right, Action iAction)
     {
+        Debug.Log("does the thing");
         actionQueue.Clear();
         actionQueue.Push(Sleep);
         if (animationID != 0)
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
             interactAction = iAction;
             actionQueue.Push(PerformAction);
         }
-        targetPosition = new Vector3(position, transform.position.y, 0);
+        targetPosition = new Vector3(position, transform.parent.position.y, 0);
         actionQueue.Push(Move);
         currentAction = actionQueue.Pop();
     }
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start() //change to OnEnable when applicable
     {
+        actionQueue.Push(Sleep);
         currentAction = Sleep;
         EventHandler.Instance.PlayerChangeEvent += OnPositionChangedEvent;
     }
