@@ -202,6 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3920177700180877906}
   - component: {fileID: 4336426934190339519}
+  - component: {fileID: 5191240489725431396}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -218,8 +219,8 @@ Transform:
   m_GameObject: {fileID: 2274620235852206826}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8191904198505156316}
@@ -282,6 +283,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5191240489725431396
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274620235852206826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c64b1e528824de248871907a03af59bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6697177237529965515
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello, dear
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
   m_sharedMaterial: {fileID: -7420556498859947917, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
@@ -564,5 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26ad754561d8934facf8a61a6ec85d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  graphicalRepresentation: {fileID: 3920177700180877906}
+  animator: {fileID: 5191240489725431396}
   movementSpeed: 2
   positionTolerance: 0.1
