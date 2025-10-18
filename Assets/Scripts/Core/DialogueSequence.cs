@@ -44,4 +44,5 @@ public class DialogueSequenceStep
     public Dialogue Speaker;
     public string Line;
     [Min(0)] public float Duration = 1.5f;
+    public AudioClip Audio;
 }
