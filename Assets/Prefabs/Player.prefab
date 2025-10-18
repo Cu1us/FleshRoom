@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1963078252962899583}
   - component: {fileID: 2236813994309979769}
   - component: {fileID: 3161691404158263118}
+  - component: {fileID: 490887061603295252}
   m_Layer: 3
   m_Name: Pickup
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580835605184606038}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,6 +73,23 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 219792ebbf03ce2498d398bcb9035153, type: 2}
             m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 490887061603295252}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -136,12 +154,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: -0.2405687, y: 0.61713815}
+      - {x: -0.441989, y: 0.12350626}
+      - {x: -0.28471306, y: -0.59702504}
+      - {x: 0.36742553, y: -0.58779794}
+      - {x: 0.34718972, y: 0.598542}
   m_UseDelaunayMesh: 0
+--- !u!114 &490887061603295252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580835605184606038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 3363411740619569759}
+    Line: I hate this.
+    Duration: 1.5
 --- !u!1 &1252799508892552659
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +306,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -7775642432985750827, guid: c4cf350a6cc512b4db02008830a992a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

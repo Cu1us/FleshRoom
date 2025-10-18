@@ -200,11 +200,19 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5089743, y: 0.6142324}
-      - {x: 0.4721998, y: 0.4463857}
-      - {x: 0.47860125, y: 0.08428723}
-      - {x: 0.92605454, y: 0.13556711}
-      - {x: 0.9372869, y: 0.5934369}
+    - - {x: 0.8650378, y: 0.5729827}
+      - {x: 0.5249979, y: 0.57214785}
+      - {x: 0.5233171, y: 0.21421854}
+      - {x: 0.5514537, y: 0.21475019}
+      - {x: 0.55466306, y: 0.1779149}
+      - {x: 0.5143879, y: 0.16763762}
+      - {x: 0.51921624, y: 0.0892857}
+      - {x: 0.58869064, y: 0.09166532}
+      - {x: 0.5888146, y: 0.115333}
+      - {x: 0.6241333, y: 0.115307994}
+      - {x: 0.62719315, y: 0.17783438}
+      - {x: 0.6296687, y: 0.21315324}
+      - {x: 0.8638942, y: 0.20469517}
   m_UseDelaunayMesh: 0
 --- !u!114 &50117671
 MonoBehaviour:
@@ -218,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Wooden Pillory
+  Name: Pillory
   Interactions:
   - Type: 2
     Condition: {fileID: 0}
@@ -281,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: Despite my best efforts, the Pillroy will not open
+    Line: It's rusted shut.
     Duration: 5
 --- !u!114 &50117673
 MonoBehaviour:
@@ -297,14 +305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: An old and decrepit pillroy.
-    Duration: 3
-  - Speaker: {fileID: 511258428}
-    Line: It doesn't look like it's seen much use recently
-    Duration: 5
-  - Speaker: {fileID: 511258428}
-    Line: The hinge looks so rusted that I doubt it would open
-    Duration: 5
+    Line: An old and decrepit pillroy. It's rusted shut.
+    Duration: 2.5
 --- !u!1 &171063806
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,18 +388,37 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.33771014, y: 1.5109898}
-      - {x: -0.23474482, y: 0.7645124}
-      - {x: -0.01939781, y: 0.6903687}
+    - - {x: -0.23686711, y: 1.4890891}
+      - {x: -0.21048012, y: 1.0127732}
+      - {x: -0.18403585, y: 0.9061403}
+      - {x: -0.20839864, y: 0.85762465}
+      - {x: -0.18186055, y: 0.7750843}
+      - {x: -0.08031233, y: 0.72924376}
+      - {x: -0.035847507, y: 0.7659998}
+      - {x: -0.042603098, y: 0.84331805}
+      - {x: -0.081609726, y: 0.91984385}
+      - {x: -0.13292375, y: 0.916506}
+      - {x: -0.16062005, y: 1.4555533}
       - {x: 0.013432309, y: 1.4697891}
-      - {x: 0.16908044, y: 1.4190127}
-      - {x: 0.21855131, y: 1.0114981}
-      - {x: 0.38092914, y: 1.0615387}
-      - {x: 0.47200397, y: 1.3529241}
+      - {x: 0.33404398, y: 1.4013393}
+      - {x: 0.27169025, y: 1.2075315}
+      - {x: 0.23995756, y: 1.1173829}
+      - {x: 0.24894927, y: 1.0791174}
+      - {x: 0.28124392, y: 1.0752825}
+      - {x: 0.30464467, y: 1.137967}
+      - {x: 0.3377358, y: 1.1606516}
+      - {x: 0.3773356, y: 1.2562281}
+      - {x: 0.5684359, y: 1.4166744}
       - {x: 1.6688615, y: 1.4027162}
-      - {x: 2.1785808, y: 1.3277092}
-      - {x: 2.1907356, y: 0.9007268}
-      - {x: 2.3604498, y: 0.9716117}
+      - {x: 2.2238832, y: 1.3933353}
+      - {x: 2.219424, y: 1.1763349}
+      - {x: 2.2668905, y: 0.98399144}
+      - {x: 2.3201292, y: 0.986529}
+      - {x: 2.3282108, y: 1.0634866}
+      - {x: 2.3100958, y: 1.0777491}
+      - {x: 2.2911708, y: 1.1425755}
+      - {x: 2.3011973, y: 1.2080919}
+      - {x: 2.3017547, y: 1.3353802}
       - {x: 2.3995051, y: 1.413909}
   m_UseDelaunayMesh: 0
 --- !u!114 &171063809
@@ -412,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Rusted Chains
+  Name: Chains
   Interactions:
   - Type: 2
     Condition: {fileID: 0}
@@ -482,14 +503,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: They're chains
+    Line: Huge, heavy, rusted shackles.
+    Duration: 1.5
+  - Speaker: {fileID: 511258428}
+    Line: I oft shiver at the thought of them falling and crushing me.
     Duration: 3
-  - Speaker: {fileID: 511258428}
-    Line: There's no wind here, so the chains hang steady.
-    Duration: 5
-  - Speaker: {fileID: 511258428}
-    Line: Save the one shackled to the Jester
-    Duration: 4
 --- !u!114 &171063811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,8 +522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: I can't reach the chains
-    Duration: 4
+    Line: I'd need a ladder.
+    Duration: 2
 --- !u!1 &403681860
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,11 +727,52 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.17421664, y: 0.9691246}
-      - {x: -0.08354293, y: 0.60965484}
-      - {x: 0.26054913, y: 0.08860454}
-      - {x: 1.0714468, y: 0.08174327}
-      - {x: 0.7354557, y: 0.70079875}
+    - - {x: 0.5164688, y: 0.699335}
+      - {x: 0.45584542, y: 0.71415305}
+      - {x: 0.41226447, y: 0.7392052}
+      - {x: 0.3460614, y: 0.79472625}
+      - {x: 0.28395662, y: 0.79347146}
+      - {x: 0.21844035, y: 0.74191153}
+      - {x: 0.13921367, y: 0.7482116}
+      - {x: 0.11270166, y: 0.70678544}
+      - {x: 0.046742644, y: 0.706329}
+      - {x: -0.012883734, y: 0.65881884}
+      - {x: -0.00015832484, y: 0.55900973}
+      - {x: -0.01790221, y: 0.51420784}
+      - {x: 0.00073521025, y: 0.48439556}
+      - {x: 0.06489913, y: 0.48019072}
+      - {x: 0.05930365, y: 0.53672135}
+      - {x: 0.14110589, y: 0.53288484}
+      - {x: 0.1521469, y: 0.5020068}
+      - {x: 0.18247634, y: 0.49332076}
+      - {x: 0.23580669, y: 0.4597028}
+      - {x: 0.25539535, y: 0.3918362}
+      - {x: 0.2818545, y: 0.28577936}
+      - {x: 0.3686197, y: 0.1854764}
+      - {x: 0.4123615, y: 0.09853428}
+      - {x: 0.23962596, y: -0.0059750536}
+      - {x: 0.28503612, y: -0.047189638}
+      - {x: 0.49306744, y: 0.011664666}
+      - {x: 0.53425986, y: -0.087819695}
+      - {x: 0.5059589, y: -0.13645843}
+      - {x: 0.8038995, y: -0.119512916}
+      - {x: 0.83372205, y: -0.02997629}
+      - {x: 0.9033434, y: -0.08139285}
+      - {x: 0.99861205, y: -0.06145832}
+      - {x: 1.0632542, y: -0.045087695}
+      - {x: 1.0862104, y: 0.06115064}
+      - {x: 0.79639846, y: 0.31977102}
+      - {x: 0.7560567, y: 0.37919363}
+      - {x: 0.72974116, y: 0.4486292}
+      - {x: 0.80091584, y: 0.4961008}
+      - {x: 0.74721354, y: 0.57835376}
+      - {x: 0.6710527, y: 0.5095567}
+      - {x: 0.62696797, y: 0.5420481}
+      - {x: 0.5935535, y: 0.6021001}
+      - {x: 0.76347953, y: 0.69158584}
+      - {x: 0.7187731, y: 0.78011435}
+      - {x: 0.65402657, y: 0.8064752}
+      - {x: 0.6114394, y: 0.7062771}
   m_UseDelaunayMesh: 0
 --- !u!114 &464895213
 MonoBehaviour:
@@ -727,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Jester Johnsson
+  Name: Jester
   Interactions:
   - Type: 1
     Condition: {fileID: 0}
@@ -855,11 +914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8191904198505156316, guid: 8ee5d106284b984458120e1c45cf31ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.33178
+      value: -8.4
       objectReference: {fileID: 0}
     - target: {fileID: 8191904198505156316, guid: 8ee5d106284b984458120e1c45cf31ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 8191904198505156316, guid: 8ee5d106284b984458120e1c45cf31ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1364,9 +1423,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.53638756, y: 0.7818534}
       - {x: -0.5634589, y: 0.23348643}
-      - {x: -0.5778688, y: -0.16330498}
-      - {x: 0.32537872, y: -0.12857327}
-      - {x: -0.19401729, y: 0.27011496}
+      - {x: -0.5503458, y: -0.24026781}
+      - {x: -0.14215118, y: -0.24006236}
+      - {x: -0.37266806, y: 0.21131538}
   m_UseDelaunayMesh: 0
 --- !u!114 &947846674
 MonoBehaviour:
@@ -1380,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Dilapidated Stairs
+  Name: Stairs
   Interactions:
   - Type: 1
     Condition: {fileID: 0}
@@ -1394,7 +1453,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1508,13 +1567,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.31214154, y: 0.974377}
-      - {x: 0.3072698, y: 1.3206595}
-      - {x: 0.13408594, y: 1.343132}
-      - {x: 0.09505267, y: 1.0052258}
-      - {x: 0.11258686, y: 0.79551566}
-      - {x: 0.16255023, y: 0.6912923}
-      - {x: 0.2554565, y: 0.7414849}
+    - - {x: 0.24177824, y: 1.0633043}
+      - {x: 0.2372107, y: 1.28891}
+      - {x: 0.1734133, y: 1.2866445}
+      - {x: 0.1631819, y: 1.0754864}
+      - {x: 0.13477243, y: 1.0365379}
+      - {x: 0.15110067, y: 0.96992826}
+      - {x: 0.16222955, y: 0.9201916}
+      - {x: 0.22309566, y: 0.9175276}
   m_UseDelaunayMesh: 0
 --- !u!114 &1165218113
 MonoBehaviour:
@@ -1528,7 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Rusted Shackle
+  Name: Shackle
   Interactions:
   - Type: 2
     Condition: {fileID: 0}
@@ -1591,14 +1651,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: I turned over the shackle looking for a keyhole
-    Duration: 5
-  - Speaker: {fileID: 511258428}
-    Line: 'It''s greasy surface makes it difficult, but after a while I conform:'
-    Duration: 5
-  - Speaker: {fileID: 511258428}
-    Line: There is no keyhole in the shackle
-    Duration: 5
+    Line: No point - the lock is greased shut.
+    Duration: 2.5
 --- !u!114 &1165218115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,11 +1667,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: The shackle containing the jester
-    Duration: 5
+    Line: The sole shackle stinks of dried grease.
+    Duration: 2
   - Speaker: {fileID: 511258428}
-    Line: It's purpose is questionable
-    Duration: 5
+    Line: I can smell it from over here.
+    Duration: 1.5
 --- !u!1 &1386228902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1683,8 @@ GameObject:
   - component: {fileID: 1386228903}
   - component: {fileID: 1386228905}
   - component: {fileID: 1386228904}
+  - component: {fileID: 1386228907}
+  - component: {fileID: 1386228906}
   m_Layer: 3
   m_Name: Pliers
   m_TagString: Untagged
@@ -1697,11 +1753,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.34943867, y: 0.86472785}
-      - {x: 0.30685362, y: 0.47398466}
-      - {x: 0.3236652, y: 0.3171856}
-      - {x: 0.57108283, y: 0.36282045}
-      - {x: 0.60823417, y: 0.92143935}
+    - - {x: 0.49661288, y: 0.8045346}
+      - {x: 0.4377391, y: 0.84403867}
+      - {x: 0.3814633, y: 0.81029433}
+      - {x: 0.39475805, y: 0.717542}
+      - {x: 0.3502179, y: 0.37741295}
+      - {x: 0.38487127, y: 0.38419563}
+      - {x: 0.44230705, y: 0.6213478}
+      - {x: 0.4932543, y: 0.38239545}
+      - {x: 0.53156024, y: 0.37122685}
+      - {x: 0.48869208, y: 0.7131181}
   m_UseDelaunayMesh: 0
 --- !u!114 &1386228905
 MonoBehaviour:
@@ -1715,8 +1776,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Large pliers
-  Interactions: []
+  Name: Pliers
+  Interactions:
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1386228907}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 1
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1386228906}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   ItemInteractions: []
   DefaultInteraction:
     Type: 0
@@ -1730,6 +1825,38 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &1386228906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386228902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 511258428}
+    Line: I can NOT wield that.
+    Duration: 1.5
+--- !u!114 &1386228907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386228902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 511258428}
+    Line: Many poor teeth have fallen to that tool.
+    Duration: 2
 --- !u!1 &1472629228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,5 +2066,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 895929970}
-  - {fileID: 511258426}
   - {fileID: 701772383}
+  - {fileID: 511258426}
