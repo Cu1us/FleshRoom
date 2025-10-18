@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        FindAnyObjectByType<MousePointer>().enabled = true;
+        //FindAnyObjectByType<MousePointer>().enabled = true;
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive).completed += OnSceneLoad;
     }
 
