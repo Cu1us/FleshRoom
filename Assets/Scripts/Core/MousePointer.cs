@@ -49,17 +49,35 @@ public class MousePointer : MonoBehaviour
 
     void SetContextUseHintLabelText(Interactable interactable)
     {
-        
+        if (interactable == null)
+        {
+            ContextUseHintLabel.text = string.Empty;
+            ContextUseHintLabel.enabled = false;
+            return;
+        }
+        if (SelectedItem != null)
+        {
+            ContextUseHintLabel.text = $"Use {SelectedItem.name} on {interactable.Name}";
+            ContextUseHintLabel.enabled = true;
+        }
+        else
+        {
+            ContextUseHintLabel.text = SelectedInteraction switch
+            {
+                InteractionType.Interact => "Interact with ",
+                InteractionType.Examine => "Examine ",
+                _ => ""
+            } + interactable.name;
+            ContextUseHintLabel.enabled = true;
+        }
     }
 
-
-
-    public void SelectInteraction(InteractionType interactionType)
+    public void SelectInteractionType(InteractionType interactionType)
     {
         SelectedInteraction = interactionType;
         SelectedItem = null;
     }
-    public void SelectInteraction(Item item)
+    public void SelectInteractionItem(Item item)
     {
         SelectedInteraction = InteractionType.None;
         SelectedItem = item;
