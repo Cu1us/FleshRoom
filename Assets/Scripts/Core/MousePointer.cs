@@ -127,6 +127,12 @@ public class MousePointer : MonoBehaviour
             } + interactable.Name;
             ContextUseHintLabel.enabled = true;
         }
+        Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
+        bool right = pointerPos.x > Screen.width * (2f / 3f);
+        ContextUseHintLabel.rectTransform.anchorMax = right ? new(0, 0) : new(1, 0);
+        ContextUseHintLabel.rectTransform.anchorMin = right ? new(0, 0) : new(1, 0);
+        ContextUseHintLabel.rectTransform.pivot = right ? new(1, 1) : new(0, 1);
+        ContextUseHintLabel.horizontalAlignment = right ? HorizontalAlignmentOptions.Right : HorizontalAlignmentOptions.Left;
     }
 
     public void SelectInteractionType(InteractionType interactionType)
