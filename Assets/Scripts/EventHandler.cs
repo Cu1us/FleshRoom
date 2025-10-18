@@ -20,4 +20,5 @@ public class EventHandler : MonoBehaviour
     
     public PositionChangedEvent PlayerChangeEvent;
     public ItemEvent ItemRemovedEvent;
+    public ItemEvent ItemAddedEvent;
 }

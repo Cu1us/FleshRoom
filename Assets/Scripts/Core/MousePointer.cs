@@ -33,15 +33,21 @@ public class MousePointer : MonoBehaviour
             camera = Camera.main;
         Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
         rect.position = pointerPos;
-        TryRaycastForInteractable(out Interactable interactable, pointerPos);
+        TryRaycastForInteractable(out Interactable interactable, pointerPos, out _);
         SetContextUseHintLabelText(interactable);
     }
     void OnClick(InputAction.CallbackContext callbackContext)
     {
         Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
         Vector2 worldPos = camera.ScreenToWorldPoint(pointerPos);
-        if (TryRaycastForInteractable(out Interactable interactable, pointerPos))
+        if (TryRaycastForInteractable(out Interactable interactable, pointerPos, out bool hitBackground))
         {
+            if (hitBackground)
+            {
+                EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
+                ClearInteraction();
+                return;
+            }
             if (SelectedItem != null)
             {
                 EventHandler.Instance.PlayerChangeEvent?.Invoke(
@@ -56,28 +62,29 @@ public class MousePointer : MonoBehaviour
                     () => interactable.Interact(SelectedInteraction)
                 );
             }
-            else
-            {
-                EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
-            }
         }
-        else
-        {
-            EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, null);
-        }
+        ClearInteraction();
     }
 
-    bool TryRaycastForInteractable(out Interactable interactable, Vector2 pointerPos)
+    bool TryRaycastForInteractable(out Interactable interactable, Vector2 pointerPos, out bool hitBackground)
     {
         Vector2 origin = camera.ScreenToWorldPoint(pointerPos);
         RaycastHit2D hit = Physics2D.Raycast(origin, new(0, 0), 100, InteractableLayers);
         if (hit.collider != null)
         {
+            if (hit.collider.CompareTag("Background"))
+            {
+                hitBackground = true;
+                interactable = null;
+                return true;
+            }
             if (hit.collider.gameObject.TryGetComponent(out interactable))
             {
+                hitBackground = false;
                 return true;
             }
         }
+        hitBackground = false;
         interactable = null;
         return false;
     }
@@ -114,6 +121,7 @@ public class MousePointer : MonoBehaviour
     }
     public void SelectInteractionExamine() => SelectInteractionType(InteractionType.Examine);
     public void SelectInteractionInteract() => SelectInteractionType(InteractionType.Interact);
+    public void ClearInteraction() => SelectInteractionItem(null);
     public void SelectInteractionItem(Item item)
     {
         SelectedInteraction = InteractionType.None;
