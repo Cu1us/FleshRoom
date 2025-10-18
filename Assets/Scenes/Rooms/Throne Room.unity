@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 151865376}
   - component: {fileID: 151865375}
   m_Layer: 3
-  m_Name: Jester
+  m_Name: King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 1231715099}
+    Line: "Their marriage seems\u2026 loving. "
+    Duration: 3
 --- !u!114 &151865376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,14 +186,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 151865377}
-    Line: humana human
-    Duration: 1
+    Line: Why the long face? Thou hast just been given the best job in the universe!
+    Duration: 5
   - Speaker: {fileID: 151865377}
-    Line: awoooga
-    Duration: 3
-  - Speaker: {fileID: 1231715099}
-    Line: yes
-    Duration: 1
+    Line: Make me laugh! Not my wife, she will laugh at just about anything, for
+      she is rather daft.
+    Duration: 5
+  - Speaker: {fileID: 151865377}
+    Line: 'I am the one thou must impress! Now, off with you, do not disappoint me.  '
+    Duration: 5
 --- !u!114 &151865377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   TextField: {fileID: 322965000}
-  SpeakerColor: {r: 0.6226415, g: 0.048949674, b: 0.06538009, a: 1}
+  SpeakerColor: {r: 0.3586394, g: 0.03494708, b: 0.5849056, a: 1}
 --- !u!60 &151865378
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -270,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cdef5e491bff382851d1d310c90c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
-  Name: Jester Johnsson
+  Name: The Royal
   Interactions:
   - Type: 1
     Condition: {fileID: 0}
@@ -289,7 +293,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Type: 1
+  - Type: 2
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
@@ -566,7 +570,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1004,6 +1008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661771918}
   - component: {fileID: 1661771917}
+  - component: {fileID: 1661771919}
   m_Layer: 3
   m_Name: room_throne_kingandqueen_doorClosed_0
   m_TagString: Background
@@ -1084,6 +1089,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1661771919
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661771916}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.023361206, y: -0.09344816}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 18.266666, y: 8.933333}
+    newSize: {x: 5.48, y: 2.68}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 17.846142, y: 8.512811}
+  m_EdgeRadius: 0
 --- !u!1 &1850248492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,8 +1233,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   Name: Chest
-  Interactions: []
-  ItemInteractions: []
+  Interactions:
+  - Type: 1
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hub hububub
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: sgubsugbseub
+            m_BoolArgument: 0
+          m_CallState: 2
+  ItemInteractions:
+  - Type: {fileID: 11400000, guid: 00ae914ae25d84d0cb28addaaa87df67, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: urbrubt
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultInteraction:
     Type: 0
     Condition: {fileID: 0}
@@ -1245,8 +1347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 1231715099}
-    Line: Despite my best efforts, the Pillroy will not open
-    Duration: 5
+    Line: The door is locked
+    Duration: 3
 --- !u!114 &1880799196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,10 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 1231715099}
-    Line: An old and decrepit pillroy.
-    Duration: 3
-  - Speaker: {fileID: 1231715099}
-    Line: It doesn't look like it's seen much use recently
+    Line: Supposedley there is an old jester down there
     Duration: 5
   - Speaker: {fileID: 1231715099}
     Line: The hinge looks so rusted that I doubt it would open
@@ -1357,14 +1456,14 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1880799195}
-          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
-          m_MethodName: PlaySequence
-          m_Mode: 1
+        - m_Target: {fileID: 690013458}
+          m_TargetAssemblyTypeName: RoomChanger, Assembly-CSharp
+          m_MethodName: ChangeRoom
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

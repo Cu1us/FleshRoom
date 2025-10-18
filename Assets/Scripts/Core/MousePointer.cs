@@ -105,6 +105,11 @@ public class MousePointer : MonoBehaviour
                 };
                 ContextUseHintLabel.enabled = true;
             }
+            else if (SelectedItem != null)
+            {
+                ContextUseHintLabel.text = $"Use {SelectedItem.name} on...";
+                ContextUseHintLabel.enabled = true;
+            }
             else
             {
                 ContextUseHintLabel.text = string.Empty;
