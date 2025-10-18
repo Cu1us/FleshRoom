@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1963078252962899583}
   - component: {fileID: 2236813994309979769}
   - component: {fileID: 3161691404158263118}
+  - component: {fileID: 490887061603295252}
   m_Layer: 3
   m_Name: Pickup
   m_TagString: Untagged
@@ -72,6 +73,23 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 219792ebbf03ce2498d398bcb9035153, type: 2}
             m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 490887061603295252}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -142,6 +160,22 @@ PolygonCollider2D:
       - {x: 0.36742553, y: -0.58779794}
       - {x: 0.34718972, y: 0.598542}
   m_UseDelaunayMesh: 0
+--- !u!114 &490887061603295252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580835605184606038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 3363411740619569759}
+    Line: I hate this.
+    Duration: 1.5
 --- !u!1 &1252799508892552659
 GameObject:
   m_ObjectHideFlags: 0
