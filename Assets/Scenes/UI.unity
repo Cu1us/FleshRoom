@@ -584,6 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466287374}
   - component: {fileID: 466287373}
+  - component: {fileID: 466287375}
   m_Layer: 0
   m_Name: EventHandler
   m_TagString: Untagged
@@ -618,6 +619,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &466287375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466287372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bbf92a6a88c3f4c936f5254525e258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneHandler
 --- !u!1001 &549929590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2034,10 +2047,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.70357144
+    x: 0.70535713
     y: 0
-    width: 1.3280255
-    height: 1.3280255
+    width: 1.3248408
+    height: 1.3248408
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
