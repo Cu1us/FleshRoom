@@ -2,7 +2,9 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public delegate void PositionChangedEvent(float position, int animationID, bool right, Action onComplete);
+public delegate void PositionChangedEvent(float position, Action onComplete);
+public delegate void AnimationActivation(int animationID);
+
 
 public delegate void ItemEvent(Item item);
 
@@ -15,6 +17,7 @@ public class EventHandler : MonoBehaviour
         Instance = this;
     }
 
+    
     public PositionChangedEvent PlayerChangeEvent;
     public ItemEvent ItemRemovedEvent;
 }

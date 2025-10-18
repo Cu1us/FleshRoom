@@ -37,15 +37,17 @@ public class PlayerController : MonoBehaviour
         currentAction = actionQueue.Pop();
         interactAction?.Invoke();
     }
-    private void OnPositionChangedEvent(float position, int animationID, bool right, Action iAction)
+    private void AssignAnimation(int animationID)
+    {
+        this.animationID = animationID;
+    }
+    private void OnPositionChangedEvent(float position, Action iAction)
     {
         Debug.Log("does the thing");
         actionQueue.Clear();
         actionQueue.Push(Sleep);
-        if (animationID != 0)
+        if (iAction != null)
         {
-            facingRight = right;
-            this.animationID = animationID;
             interactAction = iAction;
             actionQueue.Push(PerformAction);
         }
