@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] InputActionReference inputReference;
     [SerializeField] float movementSpeed;
     [SerializeField] float positionTolerance;
     Vector3 targetPosition;
