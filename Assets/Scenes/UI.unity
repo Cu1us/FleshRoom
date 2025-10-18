@@ -603,7 +603,7 @@ Transform:
   m_GameObject: {fileID: 466287372}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.57335, y: -1.64286, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MousePointer
   rect: {fileID: 1091539490}
   PointerAction: {fileID: -1654692200621890270, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  ClickAction: {fileID: 3001919216989983466, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  ClickAction: {fileID: 395138000875291981, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   InteractableLayers:
     serializedVersion: 2
     m_Bits: 8
