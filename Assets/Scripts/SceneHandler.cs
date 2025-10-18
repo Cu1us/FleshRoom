@@ -13,6 +13,7 @@ public class SceneHandler : MonoBehaviour
 
     public void ChangeRoom(int ID)
     {
+        Debug.Log("changes room");
         var waiting = SceneManager.LoadSceneAsync(ID, LoadSceneMode.Additive);
         waiting.completed += UnLoadCurrentScene;
         currentRoom = ID;

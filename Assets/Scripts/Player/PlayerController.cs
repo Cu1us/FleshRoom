@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         EventHandler.Instance.PlayerChangeEvent -= OnPositionChangedEvent;
     }
-    private void Start() //change to OnEnable when applicable
+    private void OnEnable()
     {
         actionQueue.Push(Sleep);
         currentAction = Sleep;
