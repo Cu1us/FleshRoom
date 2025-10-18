@@ -32,19 +32,44 @@ public class MousePointer : MonoBehaviour
             camera = Camera.main;
         Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
         rect.position = pointerPos;
-        if (TryRaycastForInteractable(out Interactable interactable))
+        if (TryRaycastForInteractable(out Interactable interactable, pointerPos))
         {
 
         }
     }
     void OnClick(InputAction.CallbackContext callbackContext)
     {
-        
+        Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
+        Vector2 worldPos = camera.ScreenToWorldPoint(pointerPos);
+        if (TryRaycastForInteractable(out Interactable interactable, pointerPos))
+        {
+            if (SelectedItem != null)
+            {
+                EventHandler.Instance.PlayerChangeEvent?.Invoke(
+                    interactable.transform.position.x,
+                    0,
+                    false,
+                    () => interactable.InteractItem(SelectedItem)
+                );
+            }
+            else if (SelectedInteraction != InteractionType.None)
+            {
+                EventHandler.Instance.PlayerChangeEvent?.Invoke(
+                    interactable.transform.position.x,
+                    0,
+                    false,
+                    () => interactable.Interact(SelectedInteraction)
+                );
+            }
+        }
+        else
+        {
+            EventHandler.Instance.PlayerChangeEvent?.Invoke(worldPos.x, 0, false, null);
+        }
     }
 
-    bool TryRaycastForInteractable(out Interactable interactable)
+    bool TryRaycastForInteractable(out Interactable interactable, Vector2 pointerPos)
     {
-        Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
         Ray ray = camera.ScreenPointToRay(pointerPos);
         if (Physics.Raycast(ray, out RaycastHit hit, 100, InteractableLayers))
         {
