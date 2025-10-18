@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         currentAction();
     }
-    
+
     void Sleep()
     {
 
@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void PerformAction()
     {
-        graphicalRepresentation.localScale = new Vector3(5, 5, 1);
+        graphicalRepresentation.localScale = new Vector3(1, 1, 1);
         animator.SetInteger("AnimationID", animationID);
         currentAction = actionQueue.Pop();
         interactAction?.Invoke();
@@ -61,11 +61,11 @@ public class PlayerController : MonoBehaviour
         targetPosition = new Vector3(position, transform.parent.position.y, 0);
         if (targetPosition.x < transform.position.x)
         {
-            graphicalRepresentation.localScale = new Vector3(-5,5, 1);
+            graphicalRepresentation.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
-            graphicalRepresentation.localScale = new Vector3(5, 5, 1);
+            graphicalRepresentation.localScale = new Vector3(1, 1, 1);
         }
         animator.SetBool("Walk", true);
         actionQueue.Push(Move);
