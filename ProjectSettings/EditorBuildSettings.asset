@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/UI.unity
     guid: 67c582d63e8a3ad40bebf766ca9a4fd9
   - enabled: 1
+    path: Assets/Scenes/Rooms/Throne Room.unity
+    guid: 0affe3c1cbf535b499b1c33fd22b1d84
+  - enabled: 1
     path: Assets/Scenes/Rooms/Dungeon.unity
     guid: e5874db33e34823498d493973afbcf60
   - enabled: 1
-    path: Assets/Scenes/Rooms/Throne Room.unity
-    guid: 0affe3c1cbf535b499b1c33fd22b1d84
+    path: Assets/Scenes/Rooms/Kitchen.unity
+    guid: 92a5d4436e3579c42a3e0c13965ac51b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

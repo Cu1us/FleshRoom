@@ -16,7 +16,10 @@ public class EventHandler : MonoBehaviour
     {
         Instance = this;
     }
-
+    public bool DungeonDoorUnlocked = false;
+    public bool JesterGreased = false;
+    public bool FromDungeon = false;
+    public bool HasGottenExposition = false;
     
     public PositionChangedEvent PlayerChangeEvent;
     public ItemEvent ItemRemovedEvent;
