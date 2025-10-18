@@ -11,6 +11,9 @@ public class MousePointer : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI ContextUseHintLabel;
 
+    public InteractionType SelectedInteraction;
+    public Item SelectedItem;
+
     new Camera camera;
 
     void Reset()
@@ -28,7 +31,7 @@ public class MousePointer : MonoBehaviour
             
         }
     }
-    
+
     bool TryRaycastForInteractable(out Interactable interactable)
     {
         Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
@@ -42,5 +45,23 @@ public class MousePointer : MonoBehaviour
         }
         interactable = null;
         return false;
+    }
+
+    void SetContextUseHintLabelText(Interactable interactable)
+    {
+        
+    }
+
+
+
+    public void SelectInteraction(InteractionType interactionType)
+    {
+        SelectedInteraction = interactionType;
+        SelectedItem = null;
+    }
+    public void SelectInteraction(Item item)
+    {
+        SelectedInteraction = InteractionType.None;
+        SelectedItem = item;
     }
 }
