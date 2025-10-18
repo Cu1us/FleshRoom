@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 151865376}
   - component: {fileID: 151865375}
   m_Layer: 3
-  m_Name: Jester
+  m_Name: King and Queen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,8 +1182,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   Name: Chest
-  Interactions: []
-  ItemInteractions: []
+  Interactions:
+  - Type: 1
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: hub hububub
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: sgubsugbseub
+            m_BoolArgument: 0
+          m_CallState: 2
+  ItemInteractions:
+  - Type: {fileID: 11400000, guid: 00ae914ae25d84d0cb28addaaa87df67, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: urbrubt
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultInteraction:
     Type: 0
     Condition: {fileID: 0}
