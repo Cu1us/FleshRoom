@@ -1,7 +1,11 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "InteractCondition", menuName = "Scriptable Objects/InteractCondition")]
-public class InteractCondition : ScriptableObject
+public abstract class InteractCondition : MonoBehaviour, IInteractCondition
 {
-    
+    public abstract bool CanInteract();
+}
+
+public interface IInteractCondition
+{
+    public bool CanInteract();
 }

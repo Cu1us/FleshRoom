@@ -7,19 +7,21 @@ using Object = UnityEngine.Object;
 public class Interaction
 {
     public InteractionType Type;
-    public Object Handler;
+    public InteractCondition Condition;
+    public InteractionEvent<InteractionType> Handler;
 }
 [Serializable]
 public class ItemInteraction
 {
-    public Item Item;
-    public Object Handler;
+    public Item Type;
+    public InteractCondition Condition;
+    public InteractionEvent<Item> Handler;
 }
 [Serializable]
-public class InteractionEvent : UnityEvent, IInteractionHandler
+public class InteractionEvent<T> : UnityEvent<T>
 {
-    public void Interact()
+    public void Interact(T type)
     {
-        Invoke();
+        Invoke(type);
     }
 }
