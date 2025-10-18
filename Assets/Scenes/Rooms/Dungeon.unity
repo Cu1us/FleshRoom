@@ -574,9 +574,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 701772382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37bbf92a6a88c3f4c936f5254525e258, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e944693b522cb348815bb42b5c0461e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneHandler
+  m_EditorClassIdentifier: Assembly-CSharp::RoomChanger
 --- !u!1 &766787846
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +991,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   Name: Dilapidated Stairs
-  Interactions: []
+  Interactions:
+  - Type: 1
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 701772384}
+          m_TargetAssemblyTypeName: RoomChanger, Assembly-CSharp
+          m_MethodName: ChangeRoom
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   ItemInteractions: []
   DefaultInteraction:
     Type: 0
