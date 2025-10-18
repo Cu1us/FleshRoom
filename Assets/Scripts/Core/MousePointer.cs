@@ -119,4 +119,13 @@ public class MousePointer : MonoBehaviour
         SelectedInteraction = InteractionType.None;
         SelectedItem = item;
     }
+
+    void OnEnable()
+    {
+        Cursor.visible = false;
+    }
+    void OnDisable()
+    {
+        Cursor.visible = true;
+    }
 }
