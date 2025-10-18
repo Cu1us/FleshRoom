@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(RectTransform))]
@@ -24,7 +25,7 @@ public class MousePointer : MonoBehaviour
     void Start()
     {
         ClickAction.action.performed += OnClick;
-        
+
     }
     void Update()
     {
@@ -32,10 +33,8 @@ public class MousePointer : MonoBehaviour
             camera = Camera.main;
         Vector2 pointerPos = PointerAction.action.ReadValue<Vector2>();
         rect.position = pointerPos;
-        if (TryRaycastForInteractable(out Interactable interactable, pointerPos))
-        {
-
-        }
+        TryRaycastForInteractable(out Interactable interactable, pointerPos);
+        SetContextUseHintLabelText(interactable);
     }
     void OnClick(InputAction.CallbackContext callbackContext)
     {
@@ -70,8 +69,9 @@ public class MousePointer : MonoBehaviour
 
     bool TryRaycastForInteractable(out Interactable interactable, Vector2 pointerPos)
     {
-        Ray ray = camera.ScreenPointToRay(pointerPos);
-        if (Physics.Raycast(ray, out RaycastHit hit, 100, InteractableLayers))
+        Vector2 origin = camera.ScreenToWorldPoint(pointerPos);
+        RaycastHit2D hit = Physics2D.Raycast(origin, new(0, 0), 100, InteractableLayers);
+        if (hit.collider != null)
         {
             if (hit.collider.gameObject.TryGetComponent(out interactable))
             {
@@ -102,7 +102,7 @@ public class MousePointer : MonoBehaviour
                 InteractionType.Interact => "Interact with ",
                 InteractionType.Examine => "Examine ",
                 _ => ""
-            } + interactable.name;
+            } + interactable.Name;
             ContextUseHintLabel.enabled = true;
         }
     }
