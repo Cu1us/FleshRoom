@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
 
     public void Interact(InteractionType interaction)
     {
+        Debug.Log($"Interacted with {name} using type {interaction}");
         bool found = false;
         for (int i = 0; i < Interactions.Length; i++)
         {
@@ -32,6 +33,7 @@ public class Interactable : MonoBehaviour
     }
     public void InteractItem(Item item)
     {
+        Debug.Log($"Interacted with {name} using item {item.name}");
         bool found = false;
         for (int i = 0; i < ItemInteractions.Length; i++)
         {

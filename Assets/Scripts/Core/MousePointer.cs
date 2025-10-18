@@ -50,16 +50,18 @@ public class MousePointer : MonoBehaviour
             }
             if (SelectedItem != null)
             {
+                Item type = SelectedItem;
                 EventHandler.Instance.PlayerChangeEvent?.Invoke(
                     interactable.transform.position.x,
-                    () => interactable.InteractItem(SelectedItem)
+                    () => interactable.InteractItem(type)
                 );
             }
             else if (SelectedInteraction != InteractionType.None)
             {
+                InteractionType type = SelectedInteraction;
                 EventHandler.Instance.PlayerChangeEvent?.Invoke(
                     interactable.transform.position.x,
-                    () => interactable.Interact(SelectedInteraction)
+                    () => interactable.Interact(type)
                 );
             }
         }
