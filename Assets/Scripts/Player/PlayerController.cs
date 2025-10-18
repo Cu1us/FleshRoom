@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] Transform graphicalRepresentation;
+    [SerializeField] Animator animator;
     [SerializeField] float movementSpeed;
     [SerializeField] float positionTolerance;
     Vector3 targetPosition;
@@ -26,14 +28,18 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Debug.Log("tries to move");
         transform.parent.position = Vector3.Lerp(transform.parent.position, targetPosition, movementSpeed * Time.deltaTime / (transform.parent.position - targetPosition).magnitude);
-        if ((transform.parent.position - targetPosition).magnitude < positionTolerance) currentAction = actionQueue.Pop();
+        if ((transform.parent.position - targetPosition).magnitude < positionTolerance)
+        {
+            animator.SetBool("Walk", false);
+            currentAction = actionQueue.Pop();
+        }
     }
 
     private void PerformAction()
     {
-        //change player rotation & play animation before returning to sleep
+        graphicalRepresentation.localScale = new Vector3(5, 5, 1);
+        animator.SetInteger("AnimationID", animationID);
         currentAction = actionQueue.Pop();
         interactAction?.Invoke();
     }
@@ -43,8 +49,9 @@ public class PlayerController : MonoBehaviour
     }
     private void OnPositionChangedEvent(float position, Action iAction)
     {
-        Debug.Log("does the thing");
         actionQueue.Clear();
+        animationID = 0;
+        animator.SetInteger("AnimationID", animationID);
         actionQueue.Push(Sleep);
         if (iAction != null)
         {
@@ -52,6 +59,15 @@ public class PlayerController : MonoBehaviour
             actionQueue.Push(PerformAction);
         }
         targetPosition = new Vector3(position, transform.parent.position.y, 0);
+        if (targetPosition.x < transform.position.x)
+        {
+            graphicalRepresentation.localScale = new Vector3(-5,5, 1);
+        }
+        else
+        {
+            graphicalRepresentation.localScale = new Vector3(5, 5, 1);
+        }
+        animator.SetBool("Walk", true);
         actionQueue.Push(Move);
         currentAction = actionQueue.Pop();
     }
