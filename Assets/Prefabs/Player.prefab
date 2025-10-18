@@ -334,7 +334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6697177237529965515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -349,8 +349,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello, dear
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74bc9c72c38acd451ab26f767ca302ed, type: 2}
-  m_sharedMaterial: {fileID: -6314049959514408164, guid: 74bc9c72c38acd451ab26f767ca302ed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
+  m_sharedMaterial: {fileID: -7420556498859947917, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -374,8 +374,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
