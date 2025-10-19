@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 151865378}
   - component: {fileID: 151865377}
   - component: {fileID: 151865375}
+  - component: {fileID: 151865380}
   m_Layer: 3
   m_Name: King
   m_TagString: Untagged
@@ -294,7 +295,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  ItemInteractions: []
+  ItemInteractions:
+  - Type: {fileID: 11400000, guid: a06c2e92cb00e81c3b10fadede3fe166, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865380}
+          m_TargetAssemblyTypeName: VictoryScript, Assembly-CSharp
+          m_MethodName: Victory
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultInteraction:
     Type: 0
     Condition: {fileID: 0}
@@ -307,6 +325,18 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &151865380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1733836c48d52542bca3b1e1c4294ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VictoryScript
 --- !u!1 &322964998
 GameObject:
   m_ObjectHideFlags: 0
