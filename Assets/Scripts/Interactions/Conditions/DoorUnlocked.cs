@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class DoorUnlockedCondition : IInteractCondition
+public class DoorUnlockedCondition : InteractCondition
 {
-    public bool CanInteract()
+    public override bool CanInteract()
     {
         return EventHandler.Instance.DungeonDoorUnlocked;
     }

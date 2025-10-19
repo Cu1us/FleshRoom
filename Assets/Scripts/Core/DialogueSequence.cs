@@ -15,6 +15,7 @@ public class DialogueSequence : MonoBehaviour
 
     public void PlaySequence()
     {
+        Debug.Log("Starts");
         StopDialogue();
         stepSequence.Clear();
         foreach (DialogueSequenceStep step in Sequence)
