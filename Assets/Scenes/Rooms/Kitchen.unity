@@ -406,6 +406,11 @@ GameObject:
   - component: {fileID: 380473587}
   - component: {fileID: 380473586}
   - component: {fileID: 380473585}
+  - component: {fileID: 380473594}
+  - component: {fileID: 380473593}
+  - component: {fileID: 380473592}
+  - component: {fileID: 380473591}
+  - component: {fileID: 380473590}
   m_Layer: 3
   m_Name: Cook
   m_TagString: Untagged
@@ -473,10 +478,6 @@ MonoBehaviour:
   - Speaker: {fileID: 380473587}
     Line: You are yet to grow big and strong.
     Duration: 4
-    Audio: {fileID: 0}
-  - Speaker: {fileID: 380473587}
-    Line: yes
-    Duration: 1
     Audio: {fileID: 0}
   OnStart:
     m_PersistentCalls:
@@ -617,32 +618,15 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   ItemInteractions:
-  - Type: {fileID: 11400000, guid: 4053a0770a45685b5bcb1d10770f0771, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 380473594}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -656,10 +640,10 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 380473593}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -697,10 +681,10 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 380473592}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -714,10 +698,10 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 380473591}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -726,15 +710,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Type: {fileID: 11400000, guid: 4a0dfb91d6ff3519590bfc0dfffd7bab, type: 2}
+  - Type: {fileID: 11400000, guid: 00ae914ae25d84d0cb28addaaa87df67, type: 2}
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473587}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 380473590}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -755,6 +739,105 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &380473590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380473583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &380473591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380473583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &380473592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380473583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &380473593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380473583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &380473594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380473583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 0}
+    Line: 
+    Duration: 0
+    Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &535453407
 GameObject:
   m_ObjectHideFlags: 0
