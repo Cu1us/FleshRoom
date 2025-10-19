@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: iyggggguihu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
   m_sharedMaterial: {fileID: -7420556498859947917, guid: 90fbb59ccb394e89599b0dc373ef22e3, type: 2}
@@ -474,7 +474,7 @@ MonoBehaviour:
     Line: You are yet to grow big and strong.
     Duration: 4
     Audio: {fileID: 0}
-  - Speaker: {fileID: 0}
+  - Speaker: {fileID: 380473587}
     Line: yes
     Duration: 1
     Audio: {fileID: 0}
