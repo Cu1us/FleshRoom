@@ -266,8 +266,10 @@ GameObject:
   - component: {fileID: 243877453}
   - component: {fileID: 243877452}
   - component: {fileID: 243877454}
+  - component: {fileID: 243877456}
+  - component: {fileID: 243877455}
   m_Layer: 3
-  m_Name: room_kitchen_base_0
+  m_Name: AnimationLayer
   m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,6 +394,41 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 17.670124, y: 8.2324}
   m_EdgeRadius: 0
+--- !u!114 &243877455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243877451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d64941e48aea64b923ec441d3d4ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAnimator
+  animator: {fileID: 243877456}
+--- !u!95 &243877456
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243877451}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 307b06c4be25be14aac6dc207515f945, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &380473583
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,17 +511,41 @@ MonoBehaviour:
   - Speaker: {fileID: 380473587}
     Line: Be aware of your surroundings, small one.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
   - Speaker: {fileID: 380473587}
     Line: You are yet to grow big and strong.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243877455}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 243877455}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &380473587
 MonoBehaviour:
   m_ObjectHideFlags: 0
