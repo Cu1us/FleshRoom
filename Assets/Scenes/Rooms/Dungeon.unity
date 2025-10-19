@@ -1178,7 +1178,7 @@ MonoBehaviour:
     Duration: 4
     Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
-    Line: The joke I could ever get myself to perform
+    Line: The joke I could never got myself to perform
     Duration: 3
     Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
