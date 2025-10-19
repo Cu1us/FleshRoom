@@ -5,5 +5,17 @@ namespace Cu1uSFX
     // DO NOT MOVE THIS FILE - A new one will be generated. Instead, change the location of this script by assigning a new target in the SFX List in /Assets/Resources/SFX List
     public static class SFX
     {
+        public readonly static PredefinedSFX Walk = new(0);
+        public readonly static PredefinedSFX Idle = new(1);
+        public readonly static PredefinedSFX Thronetalk = new(2);
+        public readonly static PredefinedSFX KitchenTalk = new(3);
+        public readonly static PredefinedSFX DungeonTalk = new(4);
+        public readonly static PredefinedSFX MenuMusic = new(5);
+        public readonly static PredefinedSFX Music = new(6);
+        public readonly static PredefinedSFX KitchenAmbience = new(7);
+        public readonly static PredefinedSFX DoorOpening = new(8);
+        public readonly static PredefinedSFX Salsicca = new(9);
+        public readonly static PredefinedSFX QueenLaugh = new(10);
+        public readonly static PredefinedSFX Interact = new(11);
     }
 }

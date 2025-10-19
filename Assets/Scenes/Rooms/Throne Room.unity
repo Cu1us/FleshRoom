@@ -940,16 +940,16 @@ MonoBehaviour:
   - Speaker: {fileID: 151865377}
     Line: Why the long face? Thou hast just been given the best job in the universe!
     Duration: 5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
   - Speaker: {fileID: 151865377}
     Line: Make me laugh! Not my wife, she will laugh at just about anything, for
       she is rather daft.
     Duration: 5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
   - Speaker: {fileID: 151865377}
     Line: 'I am the one thou must impress! Now, off with you, do not disappoint me.  '
     Duration: 5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls:

@@ -12,8 +12,141 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3360f7b61047d5329a39dd48eeb8cf2e, type: 3}
   m_Name: SFX List
   m_EditorClassIdentifier: Cu1uSFX::Cu1uSFX.Internal.SFXList
-  EnumNames: []
-  Definitions: []
+  EnumNames:
+  - Walk
+  - Idle
+  - Thronetalk
+  - KitchenTalk
+  - DungeonTalk
+  - MenuMusic
+  - Music
+  - KitchenAmbience
+  - DoorOpening
+  - Salsicca
+  - QueenLaugh
+  - Interact
+  Definitions:
+  - _name: Walk
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: e1bed0e69c8f4c149a0375e62b563a6b, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: Idle
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: 7499b468249aa344eb17043f9b4373b4, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: Thronetalk
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: KitchenTalk
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
+    - {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: DungeonTalk
+    _category: 
+    _clips:
+    - {fileID: 0}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: MenuMusic
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: d052f5e8ba1cee94486812756a8ec53d, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: Music
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: cf3a3c74a105dbd49a17f21844b03748, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: KitchenAmbience
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: bfc837c2141426049a6cdac470c228b7, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: DoorOpening
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: e63bcece854fc124eb05fa173171aabb, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: Salsicca
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: 2170443d2dc15af46a1105e5aacd2433, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: QueenLaugh
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: 84ecafd1894658d41b9389589c753d83, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
+  - _name: Interact
+    _category: 
+    _clips:
+    - {fileID: 8300000, guid: a750af9885ddcb84fba1618d1a38685e, type: 3}
+    _randomizeVolume: 0
+    _volumeMin: 1
+    _volumeMax: 1
+    _randomizePitch: 0
+    _pitchMin: 1
+    _pitchMax: 1
   SFXEnumScriptPath: Assets/Scripts/SFXEnum.cs
   LogFlags: 103
   AudioSourcePoolMax: 10

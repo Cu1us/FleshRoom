@@ -1,3 +1,5 @@
+using Cu1uSFX;
+using Cu1uSFX.Internal;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -14,8 +16,9 @@ public class Dialogue : MonoBehaviour
         {
             Speaker = this,
             Line = line,
-            Duration = line.Length * 0.04f + 1
+            Duration = line.Length * 0.04f + 1,
         };
+        SFX.Interact.Play();
         ShowSequenceStep(step);
     }
     public void ShowSequenceStep(DialogueSequenceStep step)
@@ -24,6 +27,7 @@ public class Dialogue : MonoBehaviour
         TextField.enabled = true;
         TextField.text = step.Line;
         TextField.color = SpeakerColor;
+        new SFXDefinition(step.Audio).Play();
         Invoke(nameof(StopDialogue), step.Duration);
     }
     public void StopDialogue()
