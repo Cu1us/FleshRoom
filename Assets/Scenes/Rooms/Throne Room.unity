@@ -133,6 +133,11 @@ GameObject:
   - component: {fileID: 151865377}
   - component: {fileID: 151865375}
   - component: {fileID: 151865380}
+  - component: {fileID: 151865385}
+  - component: {fileID: 151865384}
+  - component: {fileID: 151865383}
+  - component: {fileID: 151865382}
+  - component: {fileID: 151865381}
   m_Layer: 3
   m_Name: King
   m_TagString: Untagged
@@ -313,6 +318,91 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Type: {fileID: 11400000, guid: a06c2e92cb00e81c3b10fadede3fe166, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865385}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865384}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: f09c78d91759ac7c9bf16b52c64f9988, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865383}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: 00ae914ae25d84d0cb28addaaa87df67, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865382}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: e8cbd7e4ab09cc5aabd93abb936a83d5, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 151865381}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultInteraction:
     Type: 0
     Condition: {fileID: 0}
@@ -337,6 +427,177 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1733836c48d52542bca3b1e1c4294ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VictoryScript
+--- !u!114 &151865381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 151865377}
+    Line: Yuck!
+    Duration: 1
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: 'What is that ominous pot containing that elongated meat? '
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: Get it away from us.
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &151865382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 151865377}
+    Line: "That\u2019s the key to the basement! "
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: 'Not the bud of some joke. '
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: "It is made for tickling the intricacies of a door\u2019s lock,  "
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: not the funny bone.
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: Out of my sight!
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &151865383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 151865377}
+    Line: 'Yuck! '
+    Duration: 1
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: What is that elongated meat?
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: ' Get it away from us.'
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &151865384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 151865377}
+    Line: You think this lard is amusing?
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: " Is this a comment on my wife\u2019s physique? "
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: 'Not as if thine mother would be much better!  '
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: "Because you don\u2019t have one!"
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  - Speaker: {fileID: 151865377}
+    Line: Out of my sight!
+    Duration: 2
+    Audio: {fileID: 8300000, guid: 641bf304eb635764488d31569b1a5605, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &151865385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151865373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 1231715099}
+    Line: So...
+    Duration: 1
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 1231715099}
+    Line: ...
+    Duration: 0.5
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 1231715099}
+    Line: "a horse walks into a bar\u2026"
+    Duration: 3.5
+    Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &322964998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,16 +1520,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 1231715099}
-    Line: I turned over the shackle looking for a keyhole
-    Duration: 5
+    Line: It is an old looking chair.
+    Duration: 3
     Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
-    Line: 'It''s greasy surface makes it difficult, but after a while I conform:'
-    Duration: 5
-    Audio: {fileID: 0}
-  - Speaker: {fileID: 1231715099}
-    Line: There is no keyhole in the shackle
-    Duration: 5
+    Line: I wonder who it is for?
+    Duration: 3
     Audio: {fileID: 0}
   OnStart:
     m_PersistentCalls:
@@ -1290,12 +1547,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 1231715099}
-    Line: The shackle containing the jester
-    Duration: 5
+    Line: I want to sit in this chair
+    Duration: 4
     Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
-    Line: It's purpose is questionable
-    Duration: 5
+    Line: However, I can not reach the seat.
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 1231715099}
+    Line: It is not for me.
+    Duration: 4
     Audio: {fileID: 0}
   OnStart:
     m_PersistentCalls:
@@ -1417,7 +1678,19 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: This does not work.
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1661771916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1839,7 @@ GameObject:
   - component: {fileID: 1850248493}
   - component: {fileID: 1850248495}
   - component: {fileID: 1850248494}
+  - component: {fileID: 1850248496}
   m_Layer: 3
   m_Name: Chest
   m_TagString: Untagged
@@ -1659,10 +1933,10 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1231715099}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 1850248496}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1685,7 +1959,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: sgubsugbseub
+            m_StringArgument: It is an ancient vessel for keeping items
             m_BoolArgument: 0
           m_CallState: 2
   ItemInteractions:
@@ -1703,7 +1977,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: urbrubt
+            m_StringArgument: 'The key does not fit '
             m_BoolArgument: 0
           m_CallState: 2
   DefaultInteraction:
@@ -1717,7 +1991,46 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1231715099}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: No use.
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1850248496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850248492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 1231715099}
+    Line: I open the chest and find that it's empty.
+    Duration: 0
+    Audio: {fileID: 8300000, guid: 35628f31174b9c14f81885178d76ad10, type: 3}
+  - Speaker: {fileID: 1231715099}
+    Line: I doth feel jested.
+    Duration: 0
+    Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1880799193
 GameObject:
   m_ObjectHideFlags: 0
