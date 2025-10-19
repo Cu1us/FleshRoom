@@ -457,12 +457,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 380473587}
-    Line: humana human
-    Duration: 1
+    Line: Be aware of your surroundings, small one.
+    Duration: 4
     Audio: {fileID: 0}
   - Speaker: {fileID: 380473587}
-    Line: awoooga
-    Duration: 3
+    Line: You are yet to grow big and strong.
+    Duration: 4
     Audio: {fileID: 0}
   - Speaker: {fileID: 0}
     Line: yes
@@ -998,6 +998,7 @@ GameObject:
   - component: {fileID: 654440912}
   - component: {fileID: 654440911}
   - component: {fileID: 654440910}
+  - component: {fileID: 654440914}
   m_Layer: 3
   m_Name: Meat
   m_TagString: Untagged
@@ -1033,9 +1034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: I'd need a ladder.
-    Duration: 2
+  - Speaker: {fileID: 586243796}
+    Line: Looks juicy... I can not identify the animal from which the meat is taken.
+    Duration: 7
     Audio: {fileID: 0}
 --- !u!114 &654440911
 MonoBehaviour:
@@ -1131,7 +1132,24 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 654440911}
+        - m_Target: {fileID: 654440910}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: 1
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 654440914}
           m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
           m_MethodName: PlaySequence
           m_Mode: 1
@@ -1180,6 +1198,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &654440914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654440908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 586243796}
+    Line: I do not wish to make physical contact with the meat.
+    Duration: 5
+    Audio: {fileID: 0}
 --- !u!1 &752452403
 GameObject:
   m_ObjectHideFlags: 0
