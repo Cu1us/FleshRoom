@@ -176,6 +176,7 @@ MonoBehaviour:
   - Speaker: {fileID: 3363411740619569759}
     Line: I hate this.
     Duration: 1.5
+    Audio: {fileID: 0}
 --- !u!1 &1252799508892552659
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,8 +432,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.3
-  m_fontSizeBase: 0.3
+  m_fontSize: 0.5
+  m_fontSizeBase: 0.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
