@@ -623,7 +623,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473594}
+        - m_Target: {fileID: 380473593}
           m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
           m_MethodName: PlaySequence
           m_Mode: 1
@@ -751,7 +751,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 380473587}
+    Line: Great source of minerals in any stew!
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -770,7 +774,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 380473587}
+    Line: 'Is this the work of the old jester? '
+    Duration: 3
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
+  - Speaker: {fileID: 380473587}
+    Line: Worth the wait!
+    Duration: 3
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -789,7 +801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 380473587}
+    Line: It is indeed some of my best work.
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -808,7 +824,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 380473587}
+    Line: 'Oh goodness, you went through the agony of getting this produce? '
+    Duration: 4
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
+  - Speaker: {fileID: 380473587}
+    Line: 'I am amazed! '
+    Duration: 3
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
+  - Speaker: {fileID: 380473587}
+    Line: This does indeed inspire my culinarily driven mind.
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
+  - Speaker: {fileID: 380473587}
+    Line: I shall cook you a meal with this devilish wurst.
+    Duration: 3
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -828,10 +860,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: 
-    Duration: 0
-    Audio: {fileID: 0}
+  - Speaker: {fileID: 380473587}
+    Line: "Any dish tastes better with pig\u2019s fat!"
+    Duration: 3
+    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []
@@ -1091,7 +1123,19 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 586243796}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Why did I try to do this?
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &535453414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,16 +1395,16 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 654440910}
-          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
-          m_MethodName: PlaySequence
-          m_Mode: 1
+        - m_Target: {fileID: 586243796}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Do not use this here.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &654440914
@@ -1785,7 +1829,19 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 586243796}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Do not.
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1118566766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2084,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 586243796}
           m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
           m_MethodName: SpeakLine
           m_Mode: 5
@@ -2037,7 +2093,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: I can't use this here
+            m_StringArgument: I can't reach.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &1244645854
@@ -2280,7 +2336,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 586243796}
           m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
           m_MethodName: SpeakLine
           m_Mode: 5
@@ -2289,7 +2345,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: This doesn't work
+            m_StringArgument: I shall not use this here.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1356249496
@@ -2404,7 +2460,7 @@ Transform:
   m_GameObject: {fileID: 1925627827}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.62, y: -2.36427, z: 0}
+  m_LocalPosition: {x: -5.93, y: -2.36427, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2494,7 +2550,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.3, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -2571,7 +2627,19 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 586243796}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: I can't put this item here.
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
