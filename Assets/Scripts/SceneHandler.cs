@@ -15,7 +15,7 @@ public class SceneHandler : MonoBehaviour
 
     public void ChangeRoom(int ID)
     {
-        source.clip = main; source.Play();
+        if (currentRoom == 0) source.clip = main; source.Play();
         var waiting = SceneManager.LoadSceneAsync(ID, LoadSceneMode.Additive);
         waiting.completed += UnLoadCurrentScene;
         currentRoom = ID;

@@ -1,3 +1,4 @@
+using Cu1uSFX;
 using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] float movementSpeed;
     [SerializeField] float positionTolerance;
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip walk, dance, idle;
     Vector3 targetPosition;
     Action currentAction, interactAction;
     private Stack<Action> actionQueue = new Stack<Action>();
@@ -23,7 +26,6 @@ public class PlayerController : MonoBehaviour
 
     void Sleep()
     {
-
     }
 
     private void Move()
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Walk", false);
             currentAction = actionQueue.Pop();
+            source.clip = idle; source.Play(); source.volume = 0.1f;
         }
     }
 
@@ -47,8 +50,8 @@ public class PlayerController : MonoBehaviour
     public void AssignAnimation(int animID)
     {
         animationID = animID;
-        if (animationID == 2) animator.SetTrigger("Salsicca");
-        if (animationID == 1) animator.SetInteger("AnimationID", 1);
+        if (animationID == 2) { animator.SetTrigger("Salsicca"); SFX.Salsicca.Play(); }
+        if (animationID == 1) { animator.SetInteger("AnimationID", 1); source.clip = dance; source.Play(); source.volume = 1f; }
     }
 
 
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour
             graphicalRepresentation.localScale = new Vector3(1, 1, 1);
         }
         animator.SetBool("Walk", true);
+        source.clip = walk; source.Play(); source.volume = 1f;
         actionQueue.Push(Move);
         currentAction = Move;
     }
