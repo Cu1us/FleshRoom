@@ -159,6 +159,7 @@ public class MousePointer : MonoBehaviour
     void OnEnable()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
     }
     void OnDisable()
     {
