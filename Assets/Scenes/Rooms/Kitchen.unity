@@ -816,7 +816,7 @@ MonoBehaviour:
   - Speaker: {fileID: 380473587}
     Line: Great source of minerals in any stew!
     Duration: 3
-    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls:
@@ -914,7 +914,7 @@ MonoBehaviour:
   - Speaker: {fileID: 380473587}
     Line: It is indeed some of my best work.
     Duration: 3
-    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls:
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   - Speaker: {fileID: 380473587}
     Line: "Any dish tastes better with pig\u2019s fat!"
     Duration: 3
-    Audio: {fileID: 8300000, guid: 7b408cced74104a4bbf72a1309565fe7, type: 3}
+    Audio: {fileID: 8300000, guid: f4d0502554b19464c8bce96becfa3647, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls:
@@ -2073,9 +2073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 586243796}
-    Line: This may help the big Jester in the basement!
+    Line: It smells strongly of bad.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: a750af9885ddcb84fba1618d1a38685e, type: 3}
   OnStart:
     m_PersistentCalls:
       m_Calls: []

@@ -823,7 +823,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 464895216}
+        - m_Target: {fileID: 511258428}
           m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
           m_MethodName: SpeakLine
           m_Mode: 5
@@ -1062,17 +1062,41 @@ MonoBehaviour:
   - Speaker: {fileID: 464895216}
     Line: 'I see you figured out the secret method of obtaining the weiner. '
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: Admirable effort, little one.
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464895218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1089,17 +1113,41 @@ MonoBehaviour:
   - Speaker: {fileID: 464895216}
     Line: HAHA
     Duration: 1
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: It's so good
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464895219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,37 +1164,61 @@ MonoBehaviour:
   - Speaker: {fileID: 464895216}
     Line: ' Oh, oh my stars! '
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: "The memories\u2026 thank you, little one... "
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: 'This pleases and settles me greatly. '
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: As a reward, I will grant you my magnum opus of comedy
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: The joke I could ever get myself to perform
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: I forged it specifficly to invoke the king's laughter
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: So surely, thau must jest, perform the ultimate joke
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &464895220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,13 +1235,37 @@ MonoBehaviour:
   - Speaker: {fileID: 464895216}
     Line: Yes, rid my wrists of this discomfort, little one
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &511258426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2092,45 +2188,69 @@ MonoBehaviour:
   - Speaker: {fileID: 464895216}
     Line: 'Oh yes, yes, I am being lubricated! '
     Duration: 3
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: 'Thank you, little one. Yes, yes, I am now indebted to you, little one. '
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: 'However, if you are willing, I have one more favour to ask. '
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: ' I do so dearly miss a certain dish my old friend used to cook for me'
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: before I relinquished myself to the basement.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: "It contains a secret ingredient that no one else can find\u2026 "
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: only our kind knows how to find them.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: ' Pardon my prudeness, but by all means; '
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
     Line: touch thine self and see what you find.
     Duration: 4
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StartTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 895929971}
+        m_TargetAssemblyTypeName: CharacterAnimator, Assembly-CSharp
+        m_MethodName: StopTalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1386228902
 GameObject:
   m_ObjectHideFlags: 0
