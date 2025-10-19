@@ -14,6 +14,7 @@ public class RoomChanger : MonoBehaviour
         {
             EventHandler.Instance.FromDungeon = false;
         }
+        SFX.DoorOpening.Play();
         EventHandler.Instance.ChangeRoomEvent?.Invoke(ID);
     }
 
