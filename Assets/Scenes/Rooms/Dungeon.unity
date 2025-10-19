@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 50117668}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.82, y: -2.22, z: 0}
+  m_LocalPosition: {x: 3.71, y: -2.22, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,7 +188,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.26, y: 0}
+  m_Offset: {x: -0.06, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -368,7 +368,7 @@ Transform:
   m_GameObject: {fileID: 171063806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2, y: -2.36427, z: 0}
+  m_LocalPosition: {x: -2.73, y: -2.36427, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -408,7 +408,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.16, y: 0}
+  m_Offset: {x: -0.55, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -971,7 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 464895216}
-    Line: I'm gross, don't look look at me!
+    Line: I'm gross, don't look  at me!
     Duration: 3
     Audio: {fileID: 0}
   - Speaker: {fileID: 464895216}
@@ -1021,7 +1021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   TextField: {fileID: 403681862}
-  SpeakerColor: {r: 0.6226415, g: 0.048949674, b: 0.06538009, a: 1}
+  SpeakerColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &464895217
 MonoBehaviour:
   m_ObjectHideFlags: 0

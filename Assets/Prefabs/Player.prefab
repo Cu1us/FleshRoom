@@ -186,8 +186,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 3363411740619569759}
-    Line: I hate this.
-    Duration: 1.5
+    Line: I am the new Jester.
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 3363411740619569759}
+    Line: I was born 2 seconds ago.
+    Duration: 3
     Audio: {fileID: 0}
   OnStart:
     m_PersistentCalls:

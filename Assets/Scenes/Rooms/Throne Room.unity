@@ -632,8 +632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2494, y: -0.52}
-  m_SizeDelta: {x: 8.4682, y: 0}
+  m_AnchoredPosition: {x: -3.86, y: -0.52}
+  m_SizeDelta: {x: 8.078796, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &322965000
 MonoBehaviour:
@@ -2047,12 +2047,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 1231715099}
-    Line: I open the chest and find that it's empty.
-    Duration: 0
+    Line: I open the chest and find that it is empty.
+    Duration: 3
     Audio: {fileID: 8300000, guid: 35628f31174b9c14f81885178d76ad10, type: 3}
   - Speaker: {fileID: 1231715099}
     Line: I doth feel jested.
-    Duration: 0
+    Duration: 3
     Audio: {fileID: 0}
   OnStart:
     m_PersistentCalls:
