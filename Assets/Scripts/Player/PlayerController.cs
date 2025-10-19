@@ -47,14 +47,11 @@ public class PlayerController : MonoBehaviour
     public void AssignAnimation(int animID)
     {
         animationID = animID;
-        if (animationID == 2) animator.SetInteger("AnimationID", animationID); Invoke("StopAnimation", 0.5f);
-        if (animationID == 3) animator.SetInteger("AnimationID", animationID);
+        if (animationID == 2) animator.SetTrigger("Salsicca");
+        if (animationID == 1) animator.SetInteger("AnimationID", 1);
     }
 
-    void StopAnimation()
-    {
-        animator.SetInteger("AnimationID", 0);
-    }
+
     private void OnPositionChangedEvent(float position, Action iAction)
     {
         actionQueue.Clear();

@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     private int previousRoom, currentRoom;
+    [SerializeField] AudioClip menu, main;
+    [SerializeField] AudioSource source;
     void Start()
     {
-        previousRoom = 2;
+        previousRoom = 0;
         EventHandler.Instance.ChangeRoomEvent += ChangeRoom;
     }
 
     public void ChangeRoom(int ID)
     {
-        Debug.Log("changes room");
+        source.clip = main; source.Play();
         var waiting = SceneManager.LoadSceneAsync(ID, LoadSceneMode.Additive);
         waiting.completed += UnLoadCurrentScene;
         currentRoom = ID;
