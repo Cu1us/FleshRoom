@@ -1,12 +1,16 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueSequence : MonoBehaviour
 {
     public DialogueSequenceStep[] Sequence;
 
     Queue<DialogueSequenceStep> stepSequence = new();
+
+    public UnityEvent OnStart;
+    public UnityEvent OnFinish;
 
 
     public void PlaySequence()
@@ -18,6 +22,7 @@ public class DialogueSequence : MonoBehaviour
             stepSequence.Enqueue(step);
             step.Speaker.StopDialogue();
         }
+        OnStart?.Invoke();
         ShowNext();
     }
     void ShowNext()
@@ -25,6 +30,7 @@ public class DialogueSequence : MonoBehaviour
         if (stepSequence.Count == 0)
         {
             CancelInvoke(nameof(ShowNext));
+            OnFinish?.Invoke();
             return;
         }
         DialogueSequenceStep step = stepSequence.Dequeue();
