@@ -172,6 +172,7 @@ MonoBehaviour:
   - Speaker: {fileID: 1231715099}
     Line: "Their marriage seems\u2026 loving. "
     Duration: 3
+    Audio: {fileID: 0}
 --- !u!114 &151865376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,13 +189,16 @@ MonoBehaviour:
   - Speaker: {fileID: 151865377}
     Line: Why the long face? Thou hast just been given the best job in the universe!
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 151865377}
     Line: Make me laugh! Not my wife, she will laugh at just about anything, for
       she is rather daft.
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 151865377}
     Line: 'I am the one thou must impress! Now, off with you, do not disappoint me.  '
     Duration: 5
+    Audio: {fileID: 0}
 --- !u!114 &151865377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,12 +862,15 @@ MonoBehaviour:
   - Speaker: {fileID: 1231715099}
     Line: I turned over the shackle looking for a keyhole
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
     Line: 'It''s greasy surface makes it difficult, but after a while I conform:'
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
     Line: There is no keyhole in the shackle
     Duration: 5
+    Audio: {fileID: 0}
 --- !u!114 &1597892965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,9 +887,11 @@ MonoBehaviour:
   - Speaker: {fileID: 1231715099}
     Line: The shackle containing the jester
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
     Line: It's purpose is questionable
     Duration: 5
+    Audio: {fileID: 0}
 --- !u!60 &1597892966
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1349,6 +1358,7 @@ MonoBehaviour:
   - Speaker: {fileID: 1231715099}
     Line: The door is locked
     Duration: 3
+    Audio: {fileID: 0}
 --- !u!114 &1880799196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,9 +1375,11 @@ MonoBehaviour:
   - Speaker: {fileID: 1231715099}
     Line: Supposedley there is an old jester down there
     Duration: 5
+    Audio: {fileID: 0}
   - Speaker: {fileID: 1231715099}
     Line: The hinge looks so rusted that I doubt it would open
     Duration: 5
+    Audio: {fileID: 0}
 --- !u!60 &1880799197
 PolygonCollider2D:
   m_ObjectHideFlags: 0

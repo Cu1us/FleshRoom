@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class FromDungeon: IInteractCondition
+public class FromDungeon: InteractCondition
 {
-    public bool CanInteract()
+    public override bool CanInteract()
     {
         return EventHandler.Instance.DungeonDoorUnlocked;
     }
