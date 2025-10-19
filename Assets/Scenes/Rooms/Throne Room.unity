@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   TextField: {fileID: 322965000}
-  SpeakerColor: {r: 0.3586394, g: 0.03494708, b: 0.5849056, a: 1}
+  SpeakerColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!60 &151865378
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -341,8 +341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7564, y: 0}
-  m_SizeDelta: {x: 1.7564, y: 0}
+  m_AnchoredPosition: {x: -4.2494, y: -0.52}
+  m_SizeDelta: {x: 8.4682, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &322965000
 MonoBehaviour:
