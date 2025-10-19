@@ -679,7 +679,6 @@ GameObject:
   - component: {fileID: 464895212}
   - component: {fileID: 464895216}
   - component: {fileID: 464895215}
-  - component: {fileID: 464895217}
   m_Layer: 3
   m_Name: Jester
   m_TagString: Untagged
@@ -809,74 +808,16 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   ItemInteractions:
-  - Type: {fileID: 11400000, guid: 4053a0770a45685b5bcb1d10770f0771, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - Type: {fileID: 11400000, guid: f09c78d91759ac7c9bf16b52c64f9988, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   - Type: {fileID: 11400000, guid: e8cbd7e4ab09cc5aabd93abb936a83d5, type: 2}
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1973136349}
           m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
           m_MethodName: TakeItem
@@ -915,7 +856,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: "Go on\u2026. Do what I could not bring myself to do
+              and make the king laugh."
             m_BoolArgument: 0
           m_CallState: 2
   - Type: {fileID: 11400000, guid: 4a0dfb91d6ff3519590bfc0dfffd7bab, type: 2}
@@ -932,7 +874,24 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Hmm... Classic
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 464895216}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Yes, rid my wrists of this discomfort, little one
             m_BoolArgument: 0
           m_CallState: 2
   DefaultInteraction:
@@ -1003,19 +962,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   TextField: {fileID: 403681862}
   SpeakerColor: {r: 0.6226415, g: 0.048949674, b: 0.06538009, a: 1}
---- !u!114 &464895217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464895210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
 --- !u!1001 &511258426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1626,6 +1572,7 @@ GameObject:
   - component: {fileID: 1165218112}
   - component: {fileID: 1165218115}
   - component: {fileID: 1165218114}
+  - component: {fileID: 1165218116}
   m_Layer: 3
   m_Name: Shackle
   m_TagString: Untagged
@@ -1769,6 +1716,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1165218116}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultInteraction:
     Type: 0
     Condition: {fileID: 0}
@@ -1830,6 +1789,55 @@ MonoBehaviour:
   - Speaker: {fileID: 511258428}
     Line: I can smell it from over here.
     Duration: 1.5
+    Audio: {fileID: 0}
+--- !u!114 &1165218116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165218110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 464895216}
+    Line: 'Oh yes, yes, I am being lubricated! '
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: 'Thank you, little one. Yes, yes, I am now indebted to you, little one. '
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: 'However, if you are willing, I have one more favour to ask. '
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: ' I do so dearly miss a certain dish my old friend used to cook for me'
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: before I relinquished myself to the basement.
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: "It contains a secret ingredient that no one else can find\u2026 "
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: only our kind knows how to find them.
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: ' Pardon my prudeness, but by all means; '
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: touch thine self and see what you find.
+    Duration: 3
     Audio: {fileID: 0}
 --- !u!1 &1386228902
 GameObject:
