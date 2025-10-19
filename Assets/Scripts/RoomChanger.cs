@@ -1,7 +1,9 @@
+using Cu1uSFX;
 using UnityEngine;
 
 public class RoomChanger : MonoBehaviour
 {
+    Animator animator;
     public void ChangeRoom(int ID)
     {
         if (ID == 3)
@@ -13,5 +15,10 @@ public class RoomChanger : MonoBehaviour
             EventHandler.Instance.FromDungeon = false;
         }
         EventHandler.Instance.ChangeRoomEvent?.Invoke(ID);
+    }
+
+    public void StartAnimation()
+    {
+        
     }
 }

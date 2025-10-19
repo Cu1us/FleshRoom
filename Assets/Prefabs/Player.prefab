@@ -71,7 +71,7 @@ MonoBehaviour:
           m_MethodName: TakeItem
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 219792ebbf03ce2498d398bcb9035153, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: f09c78d91759ac7c9bf16b52c64f9988, type: 2}
             m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0

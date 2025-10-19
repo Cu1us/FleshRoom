@@ -17,10 +17,12 @@ public class EventHandler : MonoBehaviour
         Instance = this;
     }
     public bool DungeonDoorUnlocked = false;
-    public bool JesterGreased = false;
     public bool FromDungeon = false;
     public bool HasGottenExposition = false;
-    
+    public bool FatPickedUp = false;
+    public bool KeyPickedUp = false;
+
+
     public PositionChangedEvent PlayerChangeEvent;
     public ItemEvent ItemRemovedEvent;
     public ItemEvent ItemAddedEvent;
