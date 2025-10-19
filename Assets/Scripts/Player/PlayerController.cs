@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         animationID = animID;
         if (animationID == 2) animator.SetInteger("AnimationID", animationID); Invoke("StopAnimation", 0.5f);
+        if (animationID == 3) animator.SetInteger("AnimationID", animationID);
     }
 
     void StopAnimation()
