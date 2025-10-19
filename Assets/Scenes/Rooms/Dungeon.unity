@@ -290,7 +290,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: This doesn't work
+            m_StringArgument: This doesn't work.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &50117672
@@ -310,6 +310,12 @@ MonoBehaviour:
     Line: It's rusted shut.
     Duration: 5
     Audio: {fileID: 8300000, guid: 8255b8a4fb0f8bf46ace7eaf92768dd9, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &50117673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +333,12 @@ MonoBehaviour:
     Line: An old and decrepit pillroy. It's rusted shut.
     Duration: 2.5
     Audio: {fileID: 8300000, guid: 8255b8a4fb0f8bf46ace7eaf92768dd9, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &171063806
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +525,12 @@ MonoBehaviour:
     Line: I oft shiver at the thought of them falling and crushing me.
     Duration: 3
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &171063811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +548,12 @@ MonoBehaviour:
     Line: I'd need a ladder.
     Duration: 2
     Audio: {fileID: 8300000, guid: e7942d37990c49d4bac6b21c700dfc27, type: 3}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &403681860
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +916,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 464895220}
+        - m_Target: {fileID: 464895217}
           m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
           m_MethodName: PlaySequence
           m_Mode: 1
@@ -978,6 +1002,12 @@ MonoBehaviour:
     Line: The discomfort from the shackle must be messing with my head
     Duration: 4
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &464895216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,6 +1043,12 @@ MonoBehaviour:
     Line: Admirable effort, little one.
     Duration: 3
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &464895218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,6 +1070,12 @@ MonoBehaviour:
     Line: It's so good
     Duration: 3
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &464895219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,6 +1117,12 @@ MonoBehaviour:
     Line: So surely, thau must jest, perform the ultimate joke
     Duration: 3
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &464895220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,6 +1140,12 @@ MonoBehaviour:
     Line: Yes, rid my wrists of this discomfort, little one
     Duration: 4
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &511258426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1661,6 +1715,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Type: 2
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 511258428}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: Stairs to the throneroom.
+            m_BoolArgument: 0
+          m_CallState: 2
   ItemInteractions: []
   DefaultInteraction:
     Type: 0
@@ -1673,7 +1744,19 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 511258428}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Nothing happen.
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &947846675
 Transform:
   m_ObjectHideFlags: 0
@@ -1879,7 +1962,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: I can't use this here
+            m_StringArgument: I can't use this here.
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1165218114
@@ -1899,6 +1982,12 @@ MonoBehaviour:
     Line: No point - the lock is greased shut.
     Duration: 2.5
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1165218115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,6 +2009,12 @@ MonoBehaviour:
     Line: I can smell it from over here.
     Duration: 1.5
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1165218116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,16 +2054,22 @@ MonoBehaviour:
     Audio: {fileID: 0}
   - Speaker: {fileID: 464895216}
     Line: only our kind knows how to find them.
-    Duration: 3
+    Duration: 4
     Audio: {fileID: 0}
   - Speaker: {fileID: 464895216}
     Line: ' Pardon my prudeness, but by all means; '
-    Duration: 3
+    Duration: 4
     Audio: {fileID: 0}
   - Speaker: {fileID: 464895216}
     Line: touch thine self and see what you find.
-    Duration: 3
+    Duration: 4
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1386228902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,13 +2216,37 @@ MonoBehaviour:
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 511258428}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Why did I do this?
+            m_BoolArgument: 0
+          m_CallState: 2
   DefaultItemInteraction:
     Type: {fileID: 0}
     Condition: {fileID: 0}
     Handler:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 511258428}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Doesn't work.
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1386228906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2139,6 +2264,12 @@ MonoBehaviour:
     Line: I can NOT wield that.
     Duration: 1.5
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1386228907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2156,6 +2287,12 @@ MonoBehaviour:
     Line: Many poor teeth have fallen to that tool.
     Duration: 2
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1472629228
 GameObject:
   m_ObjectHideFlags: 0
