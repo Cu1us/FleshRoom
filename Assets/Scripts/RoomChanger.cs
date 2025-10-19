@@ -17,8 +17,5 @@ public class RoomChanger : MonoBehaviour
         EventHandler.Instance.ChangeRoomEvent?.Invoke(ID);
     }
 
-    public void StartAnimation()
-    {
-        
-    }
+
 }

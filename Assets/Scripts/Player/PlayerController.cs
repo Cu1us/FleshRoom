@@ -40,12 +40,19 @@ public class PlayerController : MonoBehaviour
     {
         graphicalRepresentation.localScale = new Vector3(1, 1, 1);
         animator.SetInteger("AnimationID", animationID);
+        Debug.Log("gets here " + animationID);
         currentAction = actionQueue.Pop();
         interactAction?.Invoke();
     }
-    private void AssignAnimation(int animationID)
+    public void AssignAnimation(int animID)
     {
-        this.animationID = animationID;
+        animationID = animID;
+        if (actionQueue.Count < 3) animator.SetInteger("AnimationID", animationID); Invoke("StopAnimation", 0.5f);
+    }
+
+    void StopAnimation()
+    {
+        animator.SetInteger("AnimationID", 0);
     }
     private void OnPositionChangedEvent(float position, Action iAction)
     {
@@ -69,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
         animator.SetBool("Walk", true);
         actionQueue.Push(Move);
-        currentAction = actionQueue.Pop();
+        currentAction = Move;
     }
 
     private void OnDisable()
@@ -81,5 +88,6 @@ public class PlayerController : MonoBehaviour
         actionQueue.Push(Sleep);
         currentAction = Sleep;
         EventHandler.Instance.PlayerChangeEvent += OnPositionChangedEvent;
+        EventHandler.Instance.Animation += AssignAnimation;
     }
 }

@@ -27,4 +27,5 @@ public class EventHandler : MonoBehaviour
     public ItemEvent ItemRemovedEvent;
     public ItemEvent ItemAddedEvent;
     public IntDelegate ChangeRoomEvent;
+    public IntDelegate Animation;
 }

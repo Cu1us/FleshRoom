@@ -66,6 +66,18 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 2177167036810427206}
+          m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_MethodName: AssignAnimation
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1963078252962899583}
           m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
           m_MethodName: TakeItem
@@ -177,6 +189,12 @@ MonoBehaviour:
     Line: I hate this.
     Duration: 1.5
     Audio: {fileID: 0}
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1252799508892552659
 GameObject:
   m_ObjectHideFlags: 0
