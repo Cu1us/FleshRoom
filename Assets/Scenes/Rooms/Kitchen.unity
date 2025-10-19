@@ -442,7 +442,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  Sequence: []
+  Sequence:
+  - Speaker: {fileID: 586243796}
+    Line: He is ugly.
+    Duration: 3
+    Audio: {fileID: 0}
 --- !u!114 &380473586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,7 +592,7 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 380473586}
+        - m_Target: {fileID: 380473585}
           m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
           m_MethodName: PlaySequence
           m_Mode: 1
@@ -753,6 +757,7 @@ GameObject:
   - component: {fileID: 535453411}
   - component: {fileID: 535453409}
   - component: {fileID: 535453414}
+  - component: {fileID: 535453415}
   m_Layer: 3
   m_Name: Key
   m_TagString: Untagged
@@ -847,8 +852,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 586243796}
-    Line: Many poor teeth have fallen to that tool.
-    Duration: 2
+    Line: An ornate key. It looks important.
+    Duration: 3
     Audio: {fileID: 0}
 --- !u!60 &535453412
 PolygonCollider2D:
@@ -949,6 +954,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 535453415}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   ItemInteractions: []
   DefaultInteraction:
     Type: 0
@@ -974,6 +991,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6572271d88268354e940020262cd5147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
+--- !u!114 &535453415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535453407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 380473587}
+    Line: Let me help you with that, here you go, little one.
+    Duration: 4
+    Audio: {fileID: 0}
 --- !u!114 &586243796 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3363411740619569759, guid: 8ee5d106284b984458120e1c45cf31ba, type: 3}
@@ -1375,6 +1409,7 @@ GameObject:
   - component: {fileID: 1118566763}
   - component: {fileID: 1118566761}
   - component: {fileID: 1118566766}
+  - component: {fileID: 1118566767}
   m_Layer: 3
   m_Name: Pig grease
   m_TagString: Untagged
@@ -1469,7 +1504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 586243796}
-    Line: Many poor teeth have fallen to that tool.
+    Line: Looks slick and slippery.
     Duration: 2
     Audio: {fileID: 0}
 --- !u!60 &1118566764
@@ -1571,6 +1606,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1118566767}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   ItemInteractions: []
   DefaultInteraction:
     Type: 0
@@ -1596,6 +1643,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6572271d88268354e940020262cd5147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pickup
+--- !u!114 &1118566767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118566758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 586243796}
+    Line: This may help the big Jester in the basement!
+    Duration: 4
+    Audio: {fileID: 0}
 --- !u!1 &1123975794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,9 +1708,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: No point - the lock is greased shut.
-    Duration: 2.5
+  - Speaker: {fileID: 586243796}
+    Line: I am too short to reach.
+    Duration: 2
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 586243796}
+    Line: ...
+    Duration: 1
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 586243796}
+    Line: Also I do not want it.
+    Duration: 1
     Audio: {fileID: 0}
 --- !u!114 &1123975797
 MonoBehaviour:
@@ -1661,13 +1733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: The sole shackle stinks of dried grease.
-    Duration: 2
-    Audio: {fileID: 0}
-  - Speaker: {fileID: 0}
-    Line: I can smell it from over here.
-    Duration: 1.5
+  - Speaker: {fileID: 586243796}
+    Line: A seemingly unused frying pan.
+    Duration: 3
     Audio: {fileID: 0}
 --- !u!60 &1123975798
 PolygonCollider2D:
@@ -1903,9 +1971,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: An old and decrepit pillroy. It's rusted shut.
-    Duration: 2.5
+  - Speaker: {fileID: 586243796}
+    Line: Door to the throne room.
+    Duration: 5
     Audio: {fileID: 0}
 --- !u!60 &1332554364
 PolygonCollider2D:
@@ -2157,9 +2225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: I can NOT wield that.
-    Duration: 1.5
+  - Speaker: {fileID: 586243796}
+    Line: Nothing comedic of use up there.
+    Duration: 3
     Audio: {fileID: 0}
 --- !u!114 &1925627830
 MonoBehaviour:
@@ -2174,9 +2242,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
-  - Speaker: {fileID: 0}
-    Line: Many poor teeth have fallen to that tool.
-    Duration: 2
+  - Speaker: {fileID: 586243796}
+    Line: Many jars and boxes line the shelves.
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 586243796}
+    Line: I can not identify most of their contents.
+    Duration: 3
     Audio: {fileID: 0}
 --- !u!60 &1925627831
 PolygonCollider2D:
