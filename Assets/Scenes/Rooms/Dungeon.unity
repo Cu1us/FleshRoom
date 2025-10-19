@@ -309,7 +309,7 @@ MonoBehaviour:
   - Speaker: {fileID: 511258428}
     Line: It's rusted shut.
     Duration: 5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8255b8a4fb0f8bf46ace7eaf92768dd9, type: 3}
 --- !u!114 &50117673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   - Speaker: {fileID: 511258428}
     Line: An old and decrepit pillroy. It's rusted shut.
     Duration: 2.5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 8255b8a4fb0f8bf46ace7eaf92768dd9, type: 3}
 --- !u!1 &171063806
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   - Speaker: {fileID: 511258428}
     Line: Huge, heavy, rusted shackles.
     Duration: 1.5
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: e7942d37990c49d4bac6b21c700dfc27, type: 3}
   - Speaker: {fileID: 511258428}
     Line: I oft shiver at the thought of them falling and crushing me.
     Duration: 3
@@ -529,7 +529,7 @@ MonoBehaviour:
   - Speaker: {fileID: 511258428}
     Line: I'd need a ladder.
     Duration: 2
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: e7942d37990c49d4bac6b21c700dfc27, type: 3}
 --- !u!1 &403681860
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +679,10 @@ GameObject:
   - component: {fileID: 464895212}
   - component: {fileID: 464895216}
   - component: {fileID: 464895215}
+  - component: {fileID: 464895220}
+  - component: {fileID: 464895219}
+  - component: {fileID: 464895218}
+  - component: {fileID: 464895217}
   m_Layer: 3
   m_Name: Jester
   m_TagString: Untagged
@@ -795,7 +799,25 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 464895215}
+        - m_Target: {fileID: 464895216}
+          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_MethodName: SpeakLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: For a jester, they do not seem particularly jolly.
+            m_BoolArgument: 0
+          m_CallState: 2
+  ItemInteractions:
+  - Type: {fileID: 11400000, guid: a06c2e92cb00e81c3b10fadede3fe166, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 464895218}
           m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
           m_MethodName: PlaySequence
           m_Mode: 1
@@ -807,12 +829,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  ItemInteractions:
-  - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls: []
   - Type: {fileID: 11400000, guid: e8cbd7e4ab09cc5aabd93abb936a83d5, type: 2}
     Condition: {fileID: 0}
     Handler:
@@ -842,39 +858,16 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Type: {fileID: 11400000, guid: a06c2e92cb00e81c3b10fadede3fe166, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 464895219}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "Go on\u2026. Do what I could not bring myself to do
-              and make the king laugh."
-            m_BoolArgument: 0
-          m_CallState: 2
-  - Type: {fileID: 11400000, guid: 4a0dfb91d6ff3519590bfc0dfffd7bab, type: 2}
-    Condition: {fileID: 0}
-    Handler:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Hmm... Classic
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
   - Type: {fileID: 11400000, guid: 3b2260a7420d22b6ea0db92d7ef9f8e2, type: 2}
@@ -882,10 +875,27 @@ MonoBehaviour:
     Handler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 464895216}
-          m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
-          m_MethodName: SpeakLine
-          m_Mode: 5
+        - m_Target: {fileID: 464895220}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Yes, rid my wrists of this discomfort, little one
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Type: {fileID: 11400000, guid: f09c78d91759ac7c9bf16b52c64f9988, type: 2}
+    Condition: {fileID: 0}
+    Handler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 464895220}
+          m_TargetAssemblyTypeName: DialogueSequence, Assembly-CSharp
+          m_MethodName: PlaySequence
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -937,16 +947,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 464895216}
-    Line: humana human
-    Duration: 1
-    Audio: {fileID: 0}
-  - Speaker: {fileID: 464895216}
-    Line: awoooga
+    Line: I'm gross, don't look look at me!
     Duration: 3
     Audio: {fileID: 0}
-  - Speaker: {fileID: 511258428}
-    Line: yes
-    Duration: 1
+  - Speaker: {fileID: 464895216}
+    Line: If only you had seen me in my prime
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: Are you my successor?
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: I never got the king to laugh
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: I gave up
+    Duration: 2
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: Then after I got here I figured it out
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: Oh sorry, have I been rambling?
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: The discomfort from the shackle must be messing with my head
+    Duration: 4
     Audio: {fileID: 0}
 --- !u!114 &464895216
 MonoBehaviour:
@@ -962,6 +992,106 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
   TextField: {fileID: 403681862}
   SpeakerColor: {r: 0.6226415, g: 0.048949674, b: 0.06538009, a: 1}
+--- !u!114 &464895217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464895210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 464895216}
+    Line: 'I see you figured out the secret method of obtaining the weiner. '
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: Admirable effort, little one.
+    Duration: 3
+    Audio: {fileID: 0}
+--- !u!114 &464895218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464895210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 464895216}
+    Line: HAHA
+    Duration: 1
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: It's so good
+    Duration: 3
+    Audio: {fileID: 0}
+--- !u!114 &464895219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464895210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 464895216}
+    Line: ' Oh, oh my stars! '
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: "The memories\u2026 thank you, little one... "
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: 'This pleases and settles me greatly. '
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: As a reward, I will grant you my magnum opus of comedy
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: The joke I could ever get myself to perform
+    Duration: 3
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: I forged it specifficly to invoke the king's laughter
+    Duration: 4
+    Audio: {fileID: 0}
+  - Speaker: {fileID: 464895216}
+    Line: So surely, thau must jest, perform the ultimate joke
+    Duration: 3
+    Audio: {fileID: 0}
+--- !u!114 &464895220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464895210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7273f3818a35b29b5fe1a3323cf106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  Sequence:
+  - Speaker: {fileID: 464895216}
+    Line: Yes, rid my wrists of this discomfort, little one
+    Duration: 4
+    Audio: {fileID: 0}
 --- !u!1001 &511258426
 PrefabInstance:
   m_ObjectHideFlags: 0
