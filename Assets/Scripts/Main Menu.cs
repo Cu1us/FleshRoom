@@ -9,14 +9,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        //FindAnyObjectByType<MousePointer>().enabled = true;
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive).completed += OnSceneLoad;
-    }
-
-    private void OnSceneLoad(AsyncOperation a)
-    {
-        SceneManager.UnloadSceneAsync(0); //main menu scene
-
+        EventHandler.Instance.ChangeRoomEvent(2);
     }
 
     public void Quit()
