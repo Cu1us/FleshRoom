@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   Sequence:
   - Speaker: {fileID: 511258428}
-    Line: An old and decrepit pillroy. It's rusted shut.
+    Line: An old and decrepit pillory. It's rusted shut.
     Duration: 2.5
     Audio: {fileID: 8300000, guid: 8255b8a4fb0f8bf46ace7eaf92768dd9, type: 3}
   OnStart:
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     Duration: 3
     Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
-    Line: I forged it specifficly to invoke the king's laughter
+    Line: I forged it specifically to invoke the king's laughter
     Duration: 4
     Audio: {fileID: 8300000, guid: 8d3fed6c9638eec4a8f6408938c9ca0a, type: 3}
   - Speaker: {fileID: 464895216}
