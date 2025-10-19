@@ -748,5 +748,5 @@ MonoBehaviour:
   positionTolerance: 0.1
   source: {fileID: 4912933610687233112}
   walk: {fileID: 8300000, guid: e1bed0e69c8f4c149a0375e62b563a6b, type: 3}
-  dance: {fileID: 8300000, guid: a6695023e5d5e3749909cdfc81ffd9ce, type: 3}
+  dance: {fileID: 8300000, guid: 6efd19d8df8bb5144b3643f828e92261, type: 3}
   idle: {fileID: 8300000, guid: 7499b468249aa344eb17043f9b4373b4, type: 3}
